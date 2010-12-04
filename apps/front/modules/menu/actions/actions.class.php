@@ -34,8 +34,16 @@ class menuActions extends sfActions
 //  	echo '<pre>';
 //  	print_r($this->plistData);
 //  	echo '</pre>';
-	echo $this->arrayToXml($this->plistData, new SimpleXMLElement('<dict/>'))->asXML();
+	$rawXml =  $this->arrayToXml($this->plistData, new SimpleXMLElement('<dict/>'))->asXML();
+	$plistXml = $this->xmlToPlist($rawXml);
+	echo $plistXml;
   	exit;
+  }
+  
+  private function xmlToPlist($xml)
+  {
+  	$xml = preg_replace("/<([0-9]*)\b[^>]*>(.*?)\b</\1>/","\2",$xml);
+  	return $xml;
   }
   
   private function arrayToXml(array $arr, SimpleXMLElement $xml)
