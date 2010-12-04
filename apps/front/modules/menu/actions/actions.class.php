@@ -25,7 +25,7 @@ class menuActions extends sfActions
   
   public function executePlist(sfWebRequest $request)
   {  	
-  	$this->plistData = array('key'=>'rows','array'=>array());
+  	$this->plistData = array('key'=>'Rows','array'=>array());
   	$menuItems = Doctrine_Query::create()
   				 ->from('MenuItem m')
   				 ->where('m.parent_id is NULL')
