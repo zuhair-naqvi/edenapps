@@ -39,7 +39,7 @@ class menuActions extends sfActions
   	{
   		if($item->getChildren()->count() > 0)
   		{
-	  		$plistData['dict']['rows'][$i] = array(
+	  		$plistData['dict']['array'] = array(
 	  			'dict' => array(
 	  					'key' => 'Title',
 	  					'string' => $item->getTitle(),
@@ -50,7 +50,7 @@ class menuActions extends sfActions
   		}
   		else
   		{
-  			$plistData['dict']['rows'][$i] = array(
+  			$plistData['dict']['array'] = array(
 	  			'dict' => array(
 	  					'key' => 'Title',
 	  					'string' => $item->getTitle(),
