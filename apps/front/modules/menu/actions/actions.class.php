@@ -50,7 +50,7 @@ class menuActions extends sfActions
   		}
   		else
   		{
-  			$plistData['dict']['array'] = array(
+  			$plistData = array(
 	  			'dict' => array(
 	  					'key' => 'Title',
 	  					'string' => $item->getTitle(),
