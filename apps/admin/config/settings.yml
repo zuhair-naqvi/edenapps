@@ -24,6 +24,8 @@ test:
 
 all:
   .settings:
+    enabled_modules: [default, sfGuardAuth, sfGuardGroup, sfGuardUser, sfGuardPermission]
+      
     # Form security secret (CSRF protection)
     csrf_secret:            a24fb7e8067a79ad75488ae1c939f6f037c1fe7e
 
@@ -35,5 +37,5 @@ all:
     use_database:           true
     
   .actions:
-    login_module: default
-    login_action: login
+    login_module:    sfGuardAuth
+    login_action:    signin
