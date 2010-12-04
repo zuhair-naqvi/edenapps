@@ -31,8 +31,9 @@ class menuActions extends sfActions
   				 ->execute();
   	$this->plistData['dict']['array'] = $this->buildPlistData($menuItems);
   	echo '<pre>';
-  	print_r($this->plistData);
+  	print_r($menuItems->toArray());
   	echo '</pre>';
+  	exit;
   }
   
   public function buildPlistData(Doctrine_Collection $menuItems)
