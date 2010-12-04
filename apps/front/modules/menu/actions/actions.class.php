@@ -25,7 +25,7 @@ class menuActions extends sfActions
   
   public function executePlist(sfWebRequest $request)
   {  	
-  	$this->plistData = array('dict'=>array('key'=>'rows','array'=>array()));
+  	$this->plistData = array('key'=>'rows','array'=>array());
   	$menuItems = Doctrine_Query::create()
   				 ->from('MenuItem m')
   				 ->where('m.parent_id is NULL')
@@ -34,7 +34,7 @@ class menuActions extends sfActions
 //  	echo '<pre>';
 //  	print_r($this->plistData);
 //  	echo '</pre>';
-	echo $this->arrayToXml($this->plistData, new SimpleXMLElement('<plist/>'))->asXML();
+	echo $this->arrayToXml($this->plistData, new SimpleXMLElement('<dict/>'))->asXML();
   	exit;
   }
   
