@@ -42,8 +42,8 @@ class menuActions extends sfActions
   
   private function xmlToPlist($xml)
   {
-  	$xml = preg_replace("/<([0-9]*)\b[^>]*>/","",$xml);
-  	$xml = preg_replace("/<[/]([0-9]*)\b[^>]*>/","",$xml);
+  	$xml = preg_replace("/<\d>/","",$xml);
+  	$xml = preg_replace("/</\d>/","",$xml);
   	return $xml;
   }
   
