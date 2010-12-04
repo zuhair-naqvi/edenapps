@@ -36,15 +36,29 @@ class menuActions extends sfActions
 //  	echo '</pre>';
 	$rawXml =  $this->arrayToXml($this->plistData, new SimpleXMLElement('<dict/>'))->asXML();
 	$plistXml = $this->xmlToPlist($rawXml);
+	
+	$this->getResponse()->setContentType('text/xml');	
 	echo $plistXml;
   	exit;
   }
   
   private function xmlToPlist($xml)
   {
+  	$xmlPrefix =<<<EOD
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">\n
+EOD;
+	$xmlSuffix = "\n</plist>";
   	$xml = preg_replace("/<\d>/","",$xml);
   	$xml = preg_replace("/<\/\d>/","",$xml);
-  	return $xml;
+  	$xml = str_replace('key0', 'key', $xml);
+  	$xml = str_replace('key1', 'key', $xml);
+  	$xml = str_replace('key2', 'key', $xml);
+  	$xml = str_replace('string0', 'string', $xml);
+  	$xml = str_replace('string1', 'string', $xml);
+  	$xml = str_replace('string2', 'string', $xml);
+  	return $xmlPrefix . $xml . $xmlSuffix;
   }
   
   private function arrayToXml(array $arr, SimpleXMLElement $xml)
