@@ -15,6 +15,9 @@ class menuActions extends sfActions
   *
   * @param sfRequest $request A request object
   */
+	
+  private $plistData;
+  
   public function executeIndex(sfWebRequest $request)
   {
     $this->forward('default', 'module');
@@ -22,24 +25,24 @@ class menuActions extends sfActions
   
   public function executePlist(sfWebRequest $request)
   {  	
+  	$this->plistData = array('dict'=>array('key'=>'rows','array'=>array()));
   	$menuItems = Doctrine_Query::create()
   				 ->from('MenuItem m')
   				 ->execute();
-  	$plistData = $this->buildPlistData($menuItems);
+  	$this->plistData['dict']['array'] = $this->buildPlistData($menuItems);
   	echo '<pre>';
-  	print_r($plistData);
+  	print_r($this->plistData);
   	echo '</pre>';
   }
   
   public function buildPlistData(Doctrine_Collection $menuItems)
-  {
-	$plistData = array('dict'=>array('key'=>'rows','array'=>array()));
-  	
+  {	
+  	$plistData = array();
 	foreach ($menuItems as $i => $item)
   	{
   		if($item->getChildren()->count() > 0)
   		{
-	  		$plistData['dict']['array'] = array(
+	  		$plistData = array(
 	  			'dict' => array(
 	  					'key' => 'Title',
 	  					'string' => $item->getTitle(),
