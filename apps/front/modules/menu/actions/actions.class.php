@@ -43,27 +43,23 @@ class menuActions extends sfActions
   	{
   		if($item->getChildren()->count() > 0)
   		{
-	  		array_push($plistData, array(
-	  			'dict' => array(
-	  					'key' => 'Title',
-	  					'string' => $item->getTitle(),
-	  					'key' => 'Children',
-	  					'array' => $this->buildPlistData($item->getChildren())
-	  			)	  			
-	  		));
+	  		$plistData[$i]['dict'] = array(
+				  					'key0' => 'Title',
+				  					'string' => $item->getTitle(),
+				  					'key1' => 'Children',
+				  					'array' => $this->buildPlistData($item->getChildren())		
+	  		);
   		}
   		else
   		{
-  			array_push($plistData, array(
-	  			'dict' => array(
-	  					'key' => 'Title',
+  			$plistData[$i]['dict'] = array(
+	  					'key0' => 'Title',
 	  					'string' => $item->getTitle(),
-	  					'key' => 'ItemDesc',
+	  					'key1' => 'ItemDesc',
 	  					'string' => $item->getDescription(),
-  						'key' => 'ItemPic',
+  						'key2' => 'ItemPic',
   						'string' => $item->getPicture()
-	  			)	  			
-	  		));
+	  			);
   		}
   	}
   	return $plistData; 
