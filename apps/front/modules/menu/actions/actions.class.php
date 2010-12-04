@@ -28,6 +28,7 @@ class menuActions extends sfActions
   	$this->plistData = array('dict'=>array('key'=>'rows','array'=>array()));
   	$menuItems = Doctrine_Query::create()
   				 ->from('MenuItem m')
+  				 ->where('m.parent_id is NULL')
   				 ->execute();
   	$this->plistData['dict']['array'] = $this->buildPlistData($menuItems);
 //  	echo '<pre>';
