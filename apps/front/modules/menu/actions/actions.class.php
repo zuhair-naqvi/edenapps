@@ -40,7 +40,7 @@ class menuActions extends sfActions
   private function arrayToXml(array $arr, SimpleXMLElement $xml)
   {
 	foreach ($arr as $k => $v) {
-	  is_array($v) ? arrayToXml($v, $xml->addChild($k)) : $xml->addChild($k, $v);
+	  is_array($v) ? $this->arrayToXml($v, $xml->addChild($k)) : $xml->addChild($k, $v);
 	}
     return $xml;
   }
