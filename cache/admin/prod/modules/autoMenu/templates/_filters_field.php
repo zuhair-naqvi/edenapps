@@ -4,7 +4,7 @@
   <?php include_component('menu', $name, array('type' => 'filter', 'form' => $form, 'attributes' => $attributes instanceof sfOutputEscaper ? $attributes->getRawValue() : $attributes)) ?>
 <?php else: ?>
   <tr class="<?php echo $class ?>">
-    <td>
+    <td style="vertical-align: middle">
       <?php echo $form[$name]->renderLabel($label) ?>
     </td>
     <td>
@@ -13,7 +13,10 @@
       <?php echo $form[$name]->render($attributes instanceof sfOutputEscaper ? $attributes->getRawValue() : $attributes) ?>
 
       <?php if ($help || $help = $form[$name]->renderHelp()): ?>
-        <div class="help"><?php echo __($help, array(), 'messages') ?></div>
+        <div class="help">
+					<!--span class="ui-icon ui-icon-info"></span-->
+					<?php echo __($help, array(), 'messages') ?>
+				</div>
       <?php endif; ?>
     </td>
   </tr>
