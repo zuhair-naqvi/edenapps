@@ -30,7 +30,7 @@ class menuActions extends sfActions
   				 ->from('MenuItem m')
   				 ->where('m.parent_id is NULL')
   				 ->execute();
-  	$this->plistData['dict']['array'] = $this->buildPlistData($menuItems);
+  	$this->plistData['array'] = $this->buildPlistData($menuItems);
 //  	echo '<pre>';
 //  	print_r($this->plistData);
 //  	echo '</pre>';
