@@ -33,10 +33,16 @@ class menuActions extends sfActions
 //  	echo '<pre>';
 //  	print_r($this->plistData);
 //  	echo '</pre>';
-	$xml = new SimpleXMLElement('<plist/>');
-	array_walk_recursive($this->plistData, array ($xml, 'addChild'));
-	print $xml->asXML();
+	echo $this->arrayToXml($this->plistData, new SimpleXMLElement('<plist/>'))->asXML();
   	exit;
+  }
+  
+  private function arrayToXml(array $arr, SimpleXMLElement $xml)
+  {
+	foreach ($arr as $k => $v) {
+	  is_array($v) ? arrayToXml($v, $xml->addChild($k)) : $xml->addChild($k, $v);
+	}
+    return $xml;
   }
   
   public function buildPlistData(Doctrine_Collection $menuItems)
