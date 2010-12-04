@@ -34,7 +34,7 @@ class menuActions extends sfActions
 //  	echo '<pre>';
 //  	print_r($this->plistData);
 //  	echo '</pre>';
-	$rawXml =  $this->arrayToXml($this->plistData, new SimpleXMLElement('<1/>'))->asXML();
+	$rawXml =  $this->arrayToXml($this->plistData, new SimpleXMLElement('<wrapper/>'))->asXML();
 	$plistXml = $this->xmlToPlist($rawXml);
 	
 	$this->getResponse()->setContentType('text/xml');	
@@ -51,6 +51,8 @@ class menuActions extends sfActions
 EOD;
 	$xmlSuffix = "</plist>";
 	$xml = str_replace('<?xml version="1.0"?>', '', $xml);
+	$xml = preg_replace("/<wrapper>/","",$xml);
+	$xml = preg_replace("/<\/wrapper>/","",$xml);
   	$xml = preg_replace("/<\d>/","",$xml);
   	$xml = preg_replace("/<\/\d>/","",$xml);
   	$xml = str_replace('key0', 'key', $xml);
