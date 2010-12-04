@@ -49,7 +49,8 @@ class menuActions extends sfActions
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">\n
 EOD;
-	$xmlSuffix = "\n</plist>";
+	$xmlSuffix = "</plist>";
+	$xml = str_replace('<?xml version="1.0"?>', '', $xml);
   	$xml = preg_replace("/<\d>/","",$xml);
   	$xml = preg_replace("/<\/\d>/","",$xml);
   	$xml = str_replace('key0', 'key', $xml);
@@ -57,7 +58,8 @@ EOD;
   	$xml = str_replace('key2', 'key', $xml);
   	$xml = str_replace('string0', 'string', $xml);
   	$xml = str_replace('string1', 'string', $xml);
-  	$xml = str_replace('string2', 'string', $xml);
+  	$xml = str_replace('string2', 'string', $xml);  	
+  	 
   	return $xmlPrefix . $xml . $xmlSuffix;
   }
   
