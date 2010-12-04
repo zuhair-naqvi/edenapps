@@ -55,7 +55,7 @@ class menuActions extends sfActions
   		{
 	  		$plistData[$i]['dict'] = array(
 				  					'key0' => 'Title',
-				  					'string0' => $item->getTitle(),
+				  					'string0' => htmlspecialchars($item->getTitle()),
 				  					'key1' => 'Children',
 				  					'array' => $this->buildPlistData($item->getChildren())		
 	  		);
@@ -64,9 +64,9 @@ class menuActions extends sfActions
   		{
   			$plistData[$i]['dict'] = array(
 	  					'key0' => 'Title',
-	  					'string0' => $item->getTitle(),
+	  					'string0' => htmlspecialchars($item->getTitle()),
 	  					'key1' => 'ItemDesc',
-	  					'string1' => $item->getDescription(),
+	  					'string1' => htmlspecialchars($item->getDescription()),
   						'key2' => 'ItemPic',
   						'string2' => $item->getPicture()
 	  			);
