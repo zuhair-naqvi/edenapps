@@ -30,9 +30,12 @@ class menuActions extends sfActions
   				 ->from('MenuItem m')
   				 ->execute();
   	$this->plistData['dict']['array'] = $this->buildPlistData($menuItems);
-  	echo '<pre>';
-  	print_r($this->plistData);
-  	echo '</pre>';
+//  	echo '<pre>';
+//  	print_r($this->plistData);
+//  	echo '</pre>';
+	$xml = new SimpleXMLElement('<plist/>');
+	array_walk_recursive($this->plistData, array ($xml, 'addChild'));
+	print $xml->asXML();
   	exit;
   }
   
