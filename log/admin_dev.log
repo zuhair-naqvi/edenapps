@@ -1,0 +1,315 @@
+Dec 04 14:06:03 symfony [info] {sfPatternRouting} Match route "menu_item" (/menu.:sf_format) for /menu with parameters array (  'module' => 'menu',  'action' => 'index',  'sf_format' => 'html',)
+Dec 04 14:06:03 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 04 14:06:03 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 04 14:06:03 symfony [info] {menuActions} Call "menuActions->executeIndex()"
+Dec 04 14:06:03 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Dec 04 14:06:03 symfony [info] {Doctrine_Connection_Mysql} query : SELECT COUNT(*) AS num_results FROM menu_item m - ()
+Dec 04 14:06:03 symfony [info] {sfPHPView} Render "/var/www/symfony/cache/admin/dev/modules/autoMenu/templates/indexSuccess.php"
+Dec 04 14:06:03 symfony [info] {sfPartialView} Render "/var/www/symfony/cache/admin/dev/modules/autoMenu/templates/_assets.php"
+Dec 04 14:06:03 symfony [info] {sfPartialView} Render "/var/www/symfony/cache/admin/dev/modules/autoMenu/templates/_flashes.php"
+Dec 04 14:06:03 symfony [info] {sfPartialView} Render "/var/www/symfony/cache/admin/dev/modules/autoMenu/templates/_list_header.php"
+Dec 04 14:06:03 symfony [info] {sfPartialView} Render "/var/www/symfony/cache/admin/dev/modules/autoMenu/templates/_filters.php"
+Dec 04 14:06:04 symfony [info] {sfPartialView} Render "/var/www/symfony/cache/admin/dev/modules/autoMenu/templates/_filters_field.php"
+Dec 04 14:06:04 symfony [info] {sfPartialView} Render "/var/www/symfony/cache/admin/dev/modules/autoMenu/templates/_filters_field.php"
+Dec 04 14:06:04 symfony [info] {sfPartialView} Render "/var/www/symfony/cache/admin/dev/modules/autoMenu/templates/_filters_field.php"
+Dec 04 14:06:04 symfony [info] {sfPartialView} Render "/var/www/symfony/cache/admin/dev/modules/autoMenu/templates/_filters_field.php"
+Dec 04 14:06:04 symfony [info] {sfPartialView} Render "/var/www/symfony/cache/admin/dev/modules/autoMenu/templates/_filters_field.php"
+Dec 04 14:06:04 symfony [info] {Doctrine_Connection_Mysql} query : SELECT m.id AS m__id, m.name AS m__name, m.title AS m__title, m.description AS m__description, m.picture AS m__picture, m.parent_id AS m__parent_id FROM menu_item m - ()
+Dec 04 14:06:04 symfony [info] {sfPartialView} Render "/var/www/symfony/cache/admin/dev/modules/autoMenu/templates/_list.php"
+Dec 04 14:06:04 symfony [info] {sfPartialView} Render "/var/www/symfony/cache/admin/dev/modules/autoMenu/templates/_list_th_tabular.php"
+Dec 04 14:06:04 symfony [info] {main} Set slot "sf_admin.current_header"
+Dec 04 14:06:04 symfony [info] {main} Get slot "sf_admin.current_header"
+Dec 04 14:06:04 symfony [info] {main} Set slot "sf_admin.current_header"
+Dec 04 14:06:04 symfony [info] {main} Get slot "sf_admin.current_header"
+Dec 04 14:06:04 symfony [info] {main} Set slot "sf_admin.current_header"
+Dec 04 14:06:04 symfony [info] {main} Get slot "sf_admin.current_header"
+Dec 04 14:06:04 symfony [info] {main} Set slot "sf_admin.current_header"
+Dec 04 14:06:04 symfony [info] {main} Get slot "sf_admin.current_header"
+Dec 04 14:06:04 symfony [info] {main} Set slot "sf_admin.current_header"
+Dec 04 14:06:04 symfony [info] {main} Get slot "sf_admin.current_header"
+Dec 04 14:06:04 symfony [info] {main} Set slot "sf_admin.current_header"
+Dec 04 14:06:04 symfony [info] {main} Get slot "sf_admin.current_header"
+Dec 04 14:06:04 symfony [info] {Doctrine_Connection_Mysql} query : SELECT m.id AS m__id, m.name AS m__name, m.title AS m__title, m.description AS m__description, m.picture AS m__picture, m.parent_id AS m__parent_id FROM menu_item m LIMIT 20 - ()
+Dec 04 14:06:04 symfony [info] {sfPartialView} Render "/var/www/symfony/cache/admin/dev/modules/autoMenu/templates/_list_td_batch_actions.php"
+Dec 04 14:06:04 symfony [info] {sfPartialView} Render "/var/www/symfony/cache/admin/dev/modules/autoMenu/templates/_list_td_tabular.php"
+Dec 04 14:06:04 symfony [info] {sfPartialView} Render "/var/www/symfony/cache/admin/dev/modules/autoMenu/templates/_list_td_actions.php"
+Dec 04 14:06:04 symfony [info] {sfPartialView} Render "/var/www/symfony/cache/admin/dev/modules/autoMenu/templates/_list_td_batch_actions.php"
+Dec 04 14:06:04 symfony [info] {sfPartialView} Render "/var/www/symfony/cache/admin/dev/modules/autoMenu/templates/_list_td_tabular.php"
+Dec 04 14:06:04 symfony [info] {sfPartialView} Render "/var/www/symfony/cache/admin/dev/modules/autoMenu/templates/_list_td_actions.php"
+Dec 04 14:06:04 symfony [info] {sfPartialView} Render "/var/www/symfony/cache/admin/dev/modules/autoMenu/templates/_list_td_batch_actions.php"
+Dec 04 14:06:04 symfony [info] {sfPartialView} Render "/var/www/symfony/cache/admin/dev/modules/autoMenu/templates/_list_td_tabular.php"
+Dec 04 14:06:04 symfony [info] {sfPartialView} Render "/var/www/symfony/cache/admin/dev/modules/autoMenu/templates/_list_td_actions.php"
+Dec 04 14:06:04 symfony [info] {sfPartialView} Render "/var/www/symfony/cache/admin/dev/modules/autoMenu/templates/_list_td_batch_actions.php"
+Dec 04 14:06:04 symfony [info] {sfPartialView} Render "/var/www/symfony/cache/admin/dev/modules/autoMenu/templates/_list_td_tabular.php"
+Dec 04 14:06:04 symfony [info] {sfPartialView} Render "/var/www/symfony/cache/admin/dev/modules/autoMenu/templates/_list_td_actions.php"
+Dec 04 14:06:04 symfony [info] {sfPartialView} Render "/var/www/symfony/cache/admin/dev/modules/autoMenu/templates/_list_batch_actions.php"
+Dec 04 14:06:04 symfony [info] {sfPartialView} Render "/var/www/symfony/cache/admin/dev/modules/autoMenu/templates/_list_actions.php"
+Dec 04 14:06:04 symfony [info] {sfPartialView} Render "/var/www/symfony/cache/admin/dev/modules/autoMenu/templates/_list_footer.php"
+Dec 04 14:06:04 symfony [info] {sfPHPView} Decorate content with "/var/www/symfony/apps/admin/templates/layout.php"
+Dec 04 14:06:04 symfony [info] {sfPHPView} Render "/var/www/symfony/apps/admin/templates/layout.php"
+Dec 04 14:06:04 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Dec 04 14:06:04 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 04 14:06:04 symfony [info] {sfWebDebugLogger} Configuration 733.00 ms (12)
+Dec 04 14:06:04 symfony [info] {sfWebDebugLogger} Factories 652.24 ms (1)
+Dec 04 14:06:04 symfony [info] {sfWebDebugLogger} Action "menu/index" 151.80 ms (1)
+Dec 04 14:06:04 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.01 ms (4)
+Dec 04 14:06:04 symfony [info] {sfWebDebugLogger} View "Success" for "menu/index" 368.43 ms (1)
+Dec 04 14:06:04 symfony [info] {sfWebDebugLogger} Partial "menu/_assets" 0.36 ms (1)
+Dec 04 14:06:04 symfony [info] {sfWebDebugLogger} Partial "menu/_flashes" 0.37 ms (1)
+Dec 04 14:06:04 symfony [info] {sfWebDebugLogger} Partial "menu/_list_header" 0.33 ms (1)
+Dec 04 14:06:04 symfony [info] {sfWebDebugLogger} Partial "menu/_filters" 178.57 ms (1)
+Dec 04 14:06:04 symfony [info] {sfWebDebugLogger} Partial "menu/_filters_field" 123.60 ms (5)
+Dec 04 14:06:04 symfony [info] {sfWebDebugLogger} Partial "menu/_list" 145.25 ms (1)
+Dec 04 14:06:04 symfony [info] {sfWebDebugLogger} Partial "menu/_list_th_tabular" 2.45 ms (1)
+Dec 04 14:06:04 symfony [info] {sfWebDebugLogger} Partial "menu/_list_td_batch_actions" 61.60 ms (4)
+Dec 04 14:06:04 symfony [info] {sfWebDebugLogger} Partial "menu/_list_td_tabular" 13.76 ms (4)
+Dec 04 14:06:04 symfony [info] {sfWebDebugLogger} Partial "menu/_list_td_actions" 4.44 ms (4)
+Dec 04 14:06:04 symfony [info] {sfWebDebugLogger} Partial "menu/_list_batch_actions" 10.69 ms (1)
+Dec 04 14:06:04 symfony [info] {sfWebDebugLogger} Partial "menu/_list_actions" 0.45 ms (1)
+Dec 04 14:06:04 symfony [info] {sfWebDebugLogger} Partial "menu/_list_footer" 0.33 ms (1)
+Dec 04 14:06:04 symfony [info] {sfWebResponse} Send content (92277 o)
+Dec 04 14:06:08 symfony [info] {sfPatternRouting} Match route "menu_item_edit" (/menu/:id/edit.:sf_format) for /menu/4/edit with parameters array (  'module' => 'menu',  'action' => 'edit',  'sf_format' => 'html',  'id' => '4',)
+Dec 04 14:06:08 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 04 14:06:08 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 04 14:06:08 symfony [info] {menuActions} Call "menuActions->executeEdit()"
+Dec 04 14:06:09 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Dec 04 14:06:09 symfony [info] {Doctrine_Connection_Statement} execute : SELECT m.id AS m__id, m.name AS m__name, m.title AS m__title, m.description AS m__description, m.picture AS m__picture, m.parent_id AS m__parent_id FROM menu_item m WHERE (m.id = ?) - (4)
+Dec 04 14:06:09 symfony [err] {Doctrine_Record_UnknownPropertyException} Unknown record property / related component "filename" on "MenuItem"
+Dec 04 14:06:09 symfony [info] {sfWebResponse} Send status "HTTP/1.1 500 Internal Server Error"
+Dec 04 14:06:09 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 04 14:06:09 symfony [info] {sfWebDebugLogger} Configuration 0.95 ms (10)
+Dec 04 14:06:09 symfony [info] {sfWebDebugLogger} Factories 695.82 ms (1)
+Dec 04 14:06:09 symfony [info] {sfWebDebugLogger} Action "menu/edit" 954.66 ms (1)
+Dec 04 14:06:09 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.01 ms (2)
+Dec 04 14:06:49 symfony [info] {sfPatternRouting} Match route "menu_item_edit" (/menu/:id/edit.:sf_format) for /menu/4/edit with parameters array (  'module' => 'menu',  'action' => 'edit',  'sf_format' => 'html',  'id' => '4',)
+Dec 04 14:06:49 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 04 14:06:49 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 04 14:06:49 symfony [info] {menuActions} Call "menuActions->executeEdit()"
+Dec 04 14:06:50 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Dec 04 14:06:50 symfony [info] {Doctrine_Connection_Statement} execute : SELECT m.id AS m__id, m.name AS m__name, m.title AS m__title, m.description AS m__description, m.picture AS m__picture, m.parent_id AS m__parent_id FROM menu_item m WHERE (m.id = ?) - (4)
+Dec 04 14:06:50 symfony [info] {sfPHPView} Render "/var/www/symfony/cache/admin/dev/modules/autoMenu/templates/editSuccess.php"
+Dec 04 14:06:50 symfony [info] {sfPartialView} Render "/var/www/symfony/cache/admin/dev/modules/autoMenu/templates/_assets.php"
+Dec 04 14:06:50 symfony [info] {sfPartialView} Render "/var/www/symfony/cache/admin/dev/modules/autoMenu/templates/_flashes.php"
+Dec 04 14:06:50 symfony [info] {sfPartialView} Render "/var/www/symfony/cache/admin/dev/modules/autoMenu/templates/_form_header.php"
+Dec 04 14:06:50 symfony [info] {sfPartialView} Render "/var/www/symfony/cache/admin/dev/modules/autoMenu/templates/_form.php"
+Dec 04 14:06:50 symfony [info] {sfPartialView} Render "/var/www/symfony/cache/admin/dev/modules/autoMenu/templates/_form_fieldset.php"
+Dec 04 14:06:50 symfony [info] {sfPartialView} Render "/var/www/symfony/cache/admin/dev/modules/autoMenu/templates/_form_field.php"
+Dec 04 14:06:50 symfony [info] {sfPartialView} Render "/var/www/symfony/cache/admin/dev/modules/autoMenu/templates/_form_field.php"
+Dec 04 14:06:50 symfony [info] {sfPartialView} Render "/var/www/symfony/cache/admin/dev/modules/autoMenu/templates/_form_field.php"
+Dec 04 14:06:50 symfony [info] {sfPartialView} Render "/var/www/symfony/cache/admin/dev/modules/autoMenu/templates/_form_field.php"
+Dec 04 14:06:50 symfony [info] {sfPartialView} Render "/var/www/symfony/cache/admin/dev/modules/autoMenu/templates/_form_field.php"
+Dec 04 14:06:50 symfony [info] {Doctrine_Connection_Mysql} query : SELECT m.id AS m__id, m.name AS m__name, m.title AS m__title, m.description AS m__description, m.picture AS m__picture, m.parent_id AS m__parent_id FROM menu_item m - ()
+Dec 04 14:06:50 symfony [info] {sfPartialView} Render "/var/www/symfony/cache/admin/dev/modules/autoMenu/templates/_form_actions.php"
+Dec 04 14:06:50 symfony [info] {sfPartialView} Render "/var/www/symfony/cache/admin/dev/modules/autoMenu/templates/_form_footer.php"
+Dec 04 14:06:50 symfony [info] {sfPHPView} Decorate content with "/var/www/symfony/apps/admin/templates/layout.php"
+Dec 04 14:06:50 symfony [info] {sfPHPView} Render "/var/www/symfony/apps/admin/templates/layout.php"
+Dec 04 14:06:50 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Dec 04 14:06:50 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 04 14:06:50 symfony [info] {sfWebDebugLogger} Configuration 1.02 ms (11)
+Dec 04 14:06:50 symfony [info] {sfWebDebugLogger} Factories 229.42 ms (1)
+Dec 04 14:06:50 symfony [info] {sfWebDebugLogger} Action "menu/edit" 369.86 ms (1)
+Dec 04 14:06:50 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.01 ms (3)
+Dec 04 14:06:50 symfony [info] {sfWebDebugLogger} View "Success" for "menu/edit" 164.67 ms (1)
+Dec 04 14:06:50 symfony [info] {sfWebDebugLogger} Partial "menu/_assets" 0.37 ms (1)
+Dec 04 14:06:50 symfony [info] {sfWebDebugLogger} Partial "menu/_flashes" 0.38 ms (1)
+Dec 04 14:06:50 symfony [info] {sfWebDebugLogger} Partial "menu/_form_header" 0.38 ms (1)
+Dec 04 14:06:50 symfony [info] {sfWebDebugLogger} Partial "menu/_form" 83.76 ms (1)
+Dec 04 14:06:50 symfony [info] {sfWebDebugLogger} Partial "menu/_form_fieldset" 79.16 ms (1)
+Dec 04 14:06:50 symfony [info] {sfWebDebugLogger} Partial "menu/_form_field" 26.83 ms (5)
+Dec 04 14:06:50 symfony [info] {sfWebDebugLogger} Partial "menu/_form_actions" 1.24 ms (1)
+Dec 04 14:06:50 symfony [info] {sfWebDebugLogger} Partial "menu/_form_footer" 0.37 ms (1)
+Dec 04 14:06:50 symfony [info] {sfWebResponse} Send content (72290 o)
+Dec 04 14:07:21 symfony [info] {sfPatternRouting} Match route "menu_item_update" (/menu/:id.:sf_format) for /menu/4 with parameters array (  'module' => 'menu',  'action' => 'update',  'sf_format' => 'html',  'id' => '4',)
+Dec 04 14:07:21 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 04 14:07:21 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 04 14:07:21 symfony [info] {menuActions} Call "menuActions->executeUpdate()"
+Dec 04 14:07:22 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Dec 04 14:07:22 symfony [info] {Doctrine_Connection_Statement} execute : SELECT m.id AS m__id, m.name AS m__name, m.title AS m__title, m.description AS m__description, m.picture AS m__picture, m.parent_id AS m__parent_id FROM menu_item m WHERE (m.id = ?) - (4)
+Dec 04 14:07:22 symfony [info] {Doctrine_Connection_Statement} execute : SELECT COUNT(*) AS num_results FROM menu_item m WHERE m.id = ? - (3)
+Dec 04 14:07:22 symfony [info] {Doctrine_Connection_Statement} execute : UPDATE menu_item SET picture = ? WHERE id = ? - (9d4f70f784e82c55ee7a78e2bb6b0c64a3e09171.jpg, 4)
+Dec 04 14:07:22 symfony [info] {sfFrontWebController} Redirect to "http://ec2-184-72-186-159.compute-1.amazonaws.com/admin_dev.php/menu/4/edit"
+Dec 04 14:07:22 symfony [info] {sfWebResponse} Send status "HTTP/1.1 302 Found"
+Dec 04 14:07:22 symfony [info] {sfWebResponse} Send header "Location: http://ec2-184-72-186-159.compute-1.amazonaws.com/admin_dev.php/menu/4/edit"
+Dec 04 14:07:22 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 04 14:07:22 symfony [info] {sfWebDebugLogger} Configuration 0.95 ms (10)
+Dec 04 14:07:22 symfony [info] {sfWebDebugLogger} Factories 234.34 ms (1)
+Dec 04 14:07:22 symfony [info] {sfWebDebugLogger} Action "menu/update" 545.81 ms (1)
+Dec 04 14:07:22 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.01 ms (4)
+Dec 04 14:07:22 symfony [info] {sfWebResponse} Send content (146 o)
+Dec 04 14:07:22 symfony [info] {sfPatternRouting} Match route "menu_item_edit" (/menu/:id/edit.:sf_format) for /menu/4/edit with parameters array (  'module' => 'menu',  'action' => 'edit',  'sf_format' => 'html',  'id' => '4',)
+Dec 04 14:07:23 symfony [info] {myUser} Flag old flash messages ("notice")
+Dec 04 14:07:23 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 04 14:07:23 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 04 14:07:23 symfony [info] {menuActions} Call "menuActions->executeEdit()"
+Dec 04 14:07:23 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Dec 04 14:07:23 symfony [info] {Doctrine_Connection_Statement} execute : SELECT m.id AS m__id, m.name AS m__name, m.title AS m__title, m.description AS m__description, m.picture AS m__picture, m.parent_id AS m__parent_id FROM menu_item m WHERE (m.id = ?) - (4)
+Dec 04 14:07:23 symfony [info] {sfPHPView} Render "/var/www/symfony/cache/admin/dev/modules/autoMenu/templates/editSuccess.php"
+Dec 04 14:07:23 symfony [info] {sfPartialView} Render "/var/www/symfony/cache/admin/dev/modules/autoMenu/templates/_assets.php"
+Dec 04 14:07:23 symfony [info] {sfPartialView} Render "/var/www/symfony/cache/admin/dev/modules/autoMenu/templates/_flashes.php"
+Dec 04 14:07:23 symfony [info] {sfPartialView} Render "/var/www/symfony/cache/admin/dev/modules/autoMenu/templates/_form_header.php"
+Dec 04 14:07:23 symfony [info] {sfPartialView} Render "/var/www/symfony/cache/admin/dev/modules/autoMenu/templates/_form.php"
+Dec 04 14:07:23 symfony [info] {sfPartialView} Render "/var/www/symfony/cache/admin/dev/modules/autoMenu/templates/_form_fieldset.php"
+Dec 04 14:07:23 symfony [info] {sfPartialView} Render "/var/www/symfony/cache/admin/dev/modules/autoMenu/templates/_form_field.php"
+Dec 04 14:07:23 symfony [info] {sfPartialView} Render "/var/www/symfony/cache/admin/dev/modules/autoMenu/templates/_form_field.php"
+Dec 04 14:07:23 symfony [info] {sfPartialView} Render "/var/www/symfony/cache/admin/dev/modules/autoMenu/templates/_form_field.php"
+Dec 04 14:07:23 symfony [info] {sfPartialView} Render "/var/www/symfony/cache/admin/dev/modules/autoMenu/templates/_form_field.php"
+Dec 04 14:07:23 symfony [info] {sfPartialView} Render "/var/www/symfony/cache/admin/dev/modules/autoMenu/templates/_form_field.php"
+Dec 04 14:07:23 symfony [info] {Doctrine_Connection_Mysql} query : SELECT m.id AS m__id, m.name AS m__name, m.title AS m__title, m.description AS m__description, m.picture AS m__picture, m.parent_id AS m__parent_id FROM menu_item m - ()
+Dec 04 14:07:23 symfony [info] {sfPartialView} Render "/var/www/symfony/cache/admin/dev/modules/autoMenu/templates/_form_actions.php"
+Dec 04 14:07:23 symfony [info] {sfPartialView} Render "/var/www/symfony/cache/admin/dev/modules/autoMenu/templates/_form_footer.php"
+Dec 04 14:07:23 symfony [info] {sfPHPView} Decorate content with "/var/www/symfony/apps/admin/templates/layout.php"
+Dec 04 14:07:23 symfony [info] {sfPHPView} Render "/var/www/symfony/apps/admin/templates/layout.php"
+Dec 04 14:07:23 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Dec 04 14:07:23 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 04 14:07:23 symfony [info] {sfWebDebugLogger} Configuration 1.03 ms (11)
+Dec 04 14:07:23 symfony [info] {sfWebDebugLogger} Factories 188.86 ms (1)
+Dec 04 14:07:23 symfony [info] {sfWebDebugLogger} Action "menu/edit" 233.38 ms (1)
+Dec 04 14:07:23 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.01 ms (3)
+Dec 04 14:07:23 symfony [info] {sfWebDebugLogger} View "Success" for "menu/edit" 345.14 ms (1)
+Dec 04 14:07:23 symfony [info] {sfWebDebugLogger} Partial "menu/_assets" 0.37 ms (1)
+Dec 04 14:07:23 symfony [info] {sfWebDebugLogger} Partial "menu/_flashes" 0.41 ms (1)
+Dec 04 14:07:23 symfony [info] {sfWebDebugLogger} Partial "menu/_form_header" 0.36 ms (1)
+Dec 04 14:07:23 symfony [info] {sfWebDebugLogger} Partial "menu/_form" 161.19 ms (1)
+Dec 04 14:07:23 symfony [info] {sfWebDebugLogger} Partial "menu/_form_fieldset" 156.57 ms (1)
+Dec 04 14:07:23 symfony [info] {sfWebDebugLogger} Partial "menu/_form_field" 144.23 ms (5)
+Dec 04 14:07:23 symfony [info] {sfWebDebugLogger} Partial "menu/_form_actions" 1.29 ms (1)
+Dec 04 14:07:23 symfony [info] {sfWebDebugLogger} Partial "menu/_form_footer" 0.36 ms (1)
+Dec 04 14:07:23 symfony [info] {sfWebResponse} Send content (73014 o)
+Dec 04 14:07:26 symfony [info] {myUser} Remove old flash messages ("notice")
+Dec 04 14:07:45 symfony [info] {sfPatternRouting} Match route "menu_item" (/menu.:sf_format) for /menu with parameters array (  'module' => 'menu',  'action' => 'index',  'sf_format' => 'html',)
+Dec 04 14:07:45 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 04 14:07:45 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 04 14:07:45 symfony [info] {menuActions} Call "menuActions->executeIndex()"
+Dec 04 14:07:46 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Dec 04 14:07:46 symfony [info] {Doctrine_Connection_Mysql} query : SELECT COUNT(*) AS num_results FROM menu_item m - ()
+Dec 04 14:07:46 symfony [info] {sfPHPView} Render "/var/www/symfony/cache/admin/dev/modules/autoMenu/templates/indexSuccess.php"
+Dec 04 14:07:46 symfony [info] {sfPartialView} Render "/var/www/symfony/cache/admin/dev/modules/autoMenu/templates/_assets.php"
+Dec 04 14:07:46 symfony [info] {sfPartialView} Render "/var/www/symfony/cache/admin/dev/modules/autoMenu/templates/_flashes.php"
+Dec 04 14:07:46 symfony [info] {sfPartialView} Render "/var/www/symfony/cache/admin/dev/modules/autoMenu/templates/_list_header.php"
+Dec 04 14:07:46 symfony [info] {sfPartialView} Render "/var/www/symfony/cache/admin/dev/modules/autoMenu/templates/_filters.php"
+Dec 04 14:07:46 symfony [info] {sfPartialView} Render "/var/www/symfony/cache/admin/dev/modules/autoMenu/templates/_filters_field.php"
+Dec 04 14:07:46 symfony [info] {sfPartialView} Render "/var/www/symfony/cache/admin/dev/modules/autoMenu/templates/_filters_field.php"
+Dec 04 14:07:46 symfony [info] {sfPartialView} Render "/var/www/symfony/cache/admin/dev/modules/autoMenu/templates/_filters_field.php"
+Dec 04 14:07:46 symfony [info] {sfPartialView} Render "/var/www/symfony/cache/admin/dev/modules/autoMenu/templates/_filters_field.php"
+Dec 04 14:07:46 symfony [info] {sfPartialView} Render "/var/www/symfony/cache/admin/dev/modules/autoMenu/templates/_filters_field.php"
+Dec 04 14:07:46 symfony [info] {Doctrine_Connection_Mysql} query : SELECT m.id AS m__id, m.name AS m__name, m.title AS m__title, m.description AS m__description, m.picture AS m__picture, m.parent_id AS m__parent_id FROM menu_item m - ()
+Dec 04 14:07:46 symfony [info] {sfPartialView} Render "/var/www/symfony/cache/admin/dev/modules/autoMenu/templates/_list.php"
+Dec 04 14:07:46 symfony [info] {sfPartialView} Render "/var/www/symfony/cache/admin/dev/modules/autoMenu/templates/_list_th_tabular.php"
+Dec 04 14:07:46 symfony [info] {main} Set slot "sf_admin.current_header"
+Dec 04 14:07:46 symfony [info] {main} Get slot "sf_admin.current_header"
+Dec 04 14:07:46 symfony [info] {main} Set slot "sf_admin.current_header"
+Dec 04 14:07:46 symfony [info] {main} Get slot "sf_admin.current_header"
+Dec 04 14:07:46 symfony [info] {main} Set slot "sf_admin.current_header"
+Dec 04 14:07:46 symfony [info] {main} Get slot "sf_admin.current_header"
+Dec 04 14:07:46 symfony [info] {main} Set slot "sf_admin.current_header"
+Dec 04 14:07:46 symfony [info] {main} Get slot "sf_admin.current_header"
+Dec 04 14:07:46 symfony [info] {main} Set slot "sf_admin.current_header"
+Dec 04 14:07:46 symfony [info] {main} Get slot "sf_admin.current_header"
+Dec 04 14:07:46 symfony [info] {main} Set slot "sf_admin.current_header"
+Dec 04 14:07:46 symfony [info] {main} Get slot "sf_admin.current_header"
+Dec 04 14:07:46 symfony [info] {Doctrine_Connection_Mysql} query : SELECT m.id AS m__id, m.name AS m__name, m.title AS m__title, m.description AS m__description, m.picture AS m__picture, m.parent_id AS m__parent_id FROM menu_item m LIMIT 20 - ()
+Dec 04 14:07:46 symfony [info] {sfPartialView} Render "/var/www/symfony/cache/admin/dev/modules/autoMenu/templates/_list_td_batch_actions.php"
+Dec 04 14:07:46 symfony [info] {sfPartialView} Render "/var/www/symfony/cache/admin/dev/modules/autoMenu/templates/_list_td_tabular.php"
+Dec 04 14:07:46 symfony [info] {sfPartialView} Render "/var/www/symfony/cache/admin/dev/modules/autoMenu/templates/_list_td_actions.php"
+Dec 04 14:07:46 symfony [info] {sfPartialView} Render "/var/www/symfony/cache/admin/dev/modules/autoMenu/templates/_list_td_batch_actions.php"
+Dec 04 14:07:46 symfony [info] {sfPartialView} Render "/var/www/symfony/cache/admin/dev/modules/autoMenu/templates/_list_td_tabular.php"
+Dec 04 14:07:46 symfony [info] {sfPartialView} Render "/var/www/symfony/cache/admin/dev/modules/autoMenu/templates/_list_td_actions.php"
+Dec 04 14:07:46 symfony [info] {sfPartialView} Render "/var/www/symfony/cache/admin/dev/modules/autoMenu/templates/_list_td_batch_actions.php"
+Dec 04 14:07:46 symfony [info] {sfPartialView} Render "/var/www/symfony/cache/admin/dev/modules/autoMenu/templates/_list_td_tabular.php"
+Dec 04 14:07:46 symfony [info] {sfPartialView} Render "/var/www/symfony/cache/admin/dev/modules/autoMenu/templates/_list_td_actions.php"
+Dec 04 14:07:46 symfony [info] {sfPartialView} Render "/var/www/symfony/cache/admin/dev/modules/autoMenu/templates/_list_td_batch_actions.php"
+Dec 04 14:07:46 symfony [info] {sfPartialView} Render "/var/www/symfony/cache/admin/dev/modules/autoMenu/templates/_list_td_tabular.php"
+Dec 04 14:07:46 symfony [info] {sfPartialView} Render "/var/www/symfony/cache/admin/dev/modules/autoMenu/templates/_list_td_actions.php"
+Dec 04 14:07:46 symfony [info] {sfPartialView} Render "/var/www/symfony/cache/admin/dev/modules/autoMenu/templates/_list_batch_actions.php"
+Dec 04 14:07:46 symfony [info] {sfPartialView} Render "/var/www/symfony/cache/admin/dev/modules/autoMenu/templates/_list_actions.php"
+Dec 04 14:07:46 symfony [info] {sfPartialView} Render "/var/www/symfony/cache/admin/dev/modules/autoMenu/templates/_list_footer.php"
+Dec 04 14:07:46 symfony [info] {sfPHPView} Decorate content with "/var/www/symfony/apps/admin/templates/layout.php"
+Dec 04 14:07:46 symfony [info] {sfPHPView} Render "/var/www/symfony/apps/admin/templates/layout.php"
+Dec 04 14:07:46 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Dec 04 14:07:46 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 04 14:07:46 symfony [info] {sfWebDebugLogger} Configuration 1.01 ms (11)
+Dec 04 14:07:46 symfony [info] {sfWebDebugLogger} Factories 267.02 ms (1)
+Dec 04 14:07:46 symfony [info] {sfWebDebugLogger} Action "menu/index" 309.86 ms (1)
+Dec 04 14:07:46 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.01 ms (4)
+Dec 04 14:07:46 symfony [info] {sfWebDebugLogger} View "Success" for "menu/index" 216.66 ms (1)
+Dec 04 14:07:46 symfony [info] {sfWebDebugLogger} Partial "menu/_assets" 0.36 ms (1)
+Dec 04 14:07:46 symfony [info] {sfWebDebugLogger} Partial "menu/_flashes" 0.38 ms (1)
+Dec 04 14:07:46 symfony [info] {sfWebDebugLogger} Partial "menu/_list_header" 0.33 ms (1)
+Dec 04 14:07:46 symfony [info] {sfWebDebugLogger} Partial "menu/_filters" 111.15 ms (1)
+Dec 04 14:07:46 symfony [info] {sfWebDebugLogger} Partial "menu/_filters_field" 106.21 ms (5)
+Dec 04 14:07:46 symfony [info] {sfWebDebugLogger} Partial "menu/_list" 92.70 ms (1)
+Dec 04 14:07:46 symfony [info] {sfWebDebugLogger} Partial "menu/_list_th_tabular" 2.43 ms (1)
+Dec 04 14:07:46 symfony [info] {sfWebDebugLogger} Partial "menu/_list_td_batch_actions" 1.56 ms (4)
+Dec 04 14:07:46 symfony [info] {sfWebDebugLogger} Partial "menu/_list_td_tabular" 3.74 ms (4)
+Dec 04 14:07:46 symfony [info] {sfWebDebugLogger} Partial "menu/_list_td_actions" 4.39 ms (4)
+Dec 04 14:07:46 symfony [info] {sfWebDebugLogger} Partial "menu/_list_batch_actions" 0.67 ms (1)
+Dec 04 14:07:46 symfony [info] {sfWebDebugLogger} Partial "menu/_list_actions" 0.44 ms (1)
+Dec 04 14:07:46 symfony [info] {sfWebDebugLogger} Partial "menu/_list_footer" 0.32 ms (1)
+Dec 04 14:07:46 symfony [info] {sfWebResponse} Send content (92419 o)
+Dec 04 14:09:58 symfony [info] {sfPatternRouting} Match route "menu_item" (/menu.:sf_format) for /menu with parameters array (  'module' => 'menu',  'action' => 'index',  'sf_format' => 'html',)
+Dec 04 14:09:58 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 04 14:09:58 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 04 14:09:58 symfony [info] {menuActions} Call "menuActions->executeIndex()"
+Dec 04 14:09:58 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Dec 04 14:09:58 symfony [info] {Doctrine_Connection_Mysql} query : SELECT COUNT(*) AS num_results FROM menu_item m - ()
+Dec 04 14:09:58 symfony [info] {sfPHPView} Render "/var/www/symfony/cache/admin/dev/modules/autoMenu/templates/indexSuccess.php"
+Dec 04 14:09:58 symfony [info] {sfPartialView} Render "/var/www/symfony/cache/admin/dev/modules/autoMenu/templates/_assets.php"
+Dec 04 14:09:58 symfony [info] {sfPartialView} Render "/var/www/symfony/cache/admin/dev/modules/autoMenu/templates/_flashes.php"
+Dec 04 14:09:58 symfony [info] {sfPartialView} Render "/var/www/symfony/cache/admin/dev/modules/autoMenu/templates/_list_header.php"
+Dec 04 14:09:58 symfony [info] {sfPartialView} Render "/var/www/symfony/cache/admin/dev/modules/autoMenu/templates/_filters.php"
+Dec 04 14:09:58 symfony [info] {sfPartialView} Render "/var/www/symfony/cache/admin/dev/modules/autoMenu/templates/_filters_field.php"
+Dec 04 14:09:58 symfony [info] {sfPartialView} Render "/var/www/symfony/cache/admin/dev/modules/autoMenu/templates/_filters_field.php"
+Dec 04 14:09:58 symfony [info] {sfPartialView} Render "/var/www/symfony/cache/admin/dev/modules/autoMenu/templates/_filters_field.php"
+Dec 04 14:09:58 symfony [info] {sfPartialView} Render "/var/www/symfony/cache/admin/dev/modules/autoMenu/templates/_filters_field.php"
+Dec 04 14:09:58 symfony [info] {sfPartialView} Render "/var/www/symfony/cache/admin/dev/modules/autoMenu/templates/_filters_field.php"
+Dec 04 14:09:58 symfony [info] {Doctrine_Connection_Mysql} query : SELECT m.id AS m__id, m.name AS m__name, m.title AS m__title, m.description AS m__description, m.picture AS m__picture, m.parent_id AS m__parent_id FROM menu_item m - ()
+Dec 04 14:09:58 symfony [info] {sfPartialView} Render "/var/www/symfony/cache/admin/dev/modules/autoMenu/templates/_list.php"
+Dec 04 14:09:58 symfony [info] {sfPartialView} Render "/var/www/symfony/cache/admin/dev/modules/autoMenu/templates/_list_th_tabular.php"
+Dec 04 14:09:58 symfony [info] {main} Set slot "sf_admin.current_header"
+Dec 04 14:09:58 symfony [info] {main} Get slot "sf_admin.current_header"
+Dec 04 14:09:58 symfony [info] {main} Set slot "sf_admin.current_header"
+Dec 04 14:09:58 symfony [info] {main} Get slot "sf_admin.current_header"
+Dec 04 14:09:58 symfony [info] {main} Set slot "sf_admin.current_header"
+Dec 04 14:09:58 symfony [info] {main} Get slot "sf_admin.current_header"
+Dec 04 14:09:58 symfony [info] {Doctrine_Connection_Mysql} query : SELECT m.id AS m__id, m.name AS m__name, m.title AS m__title, m.description AS m__description, m.picture AS m__picture, m.parent_id AS m__parent_id FROM menu_item m LIMIT 20 - ()
+Dec 04 14:09:58 symfony [info] {sfPartialView} Render "/var/www/symfony/cache/admin/dev/modules/autoMenu/templates/_list_td_batch_actions.php"
+Dec 04 14:09:58 symfony [info] {sfPartialView} Render "/var/www/symfony/cache/admin/dev/modules/autoMenu/templates/_list_td_tabular.php"
+Dec 04 14:09:58 symfony [info] {sfPartialView} Render "/var/www/symfony/cache/admin/dev/modules/autoMenu/templates/_list_td_actions.php"
+Dec 04 14:09:58 symfony [info] {sfPartialView} Render "/var/www/symfony/cache/admin/dev/modules/autoMenu/templates/_list_td_batch_actions.php"
+Dec 04 14:09:58 symfony [info] {sfPartialView} Render "/var/www/symfony/cache/admin/dev/modules/autoMenu/templates/_list_td_tabular.php"
+Dec 04 14:09:59 symfony [info] {Doctrine_Connection_Statement} execute : SELECT m.id AS m__id, m.name AS m__name, m.title AS m__title, m.description AS m__description, m.picture AS m__picture, m.parent_id AS m__parent_id FROM menu_item m WHERE (m.id = ?) - (1)
+Dec 04 14:09:59 symfony [info] {sfPartialView} Render "/var/www/symfony/cache/admin/dev/modules/autoMenu/templates/_list_td_actions.php"
+Dec 04 14:09:59 symfony [info] {sfPartialView} Render "/var/www/symfony/cache/admin/dev/modules/autoMenu/templates/_list_td_batch_actions.php"
+Dec 04 14:09:59 symfony [info] {sfPartialView} Render "/var/www/symfony/cache/admin/dev/modules/autoMenu/templates/_list_td_tabular.php"
+Dec 04 14:09:59 symfony [info] {Doctrine_Connection_Statement} execute : SELECT m.id AS m__id, m.name AS m__name, m.title AS m__title, m.description AS m__description, m.picture AS m__picture, m.parent_id AS m__parent_id FROM menu_item m WHERE (m.id = ?) - (2)
+Dec 04 14:09:59 symfony [info] {sfPartialView} Render "/var/www/symfony/cache/admin/dev/modules/autoMenu/templates/_list_td_actions.php"
+Dec 04 14:09:59 symfony [info] {sfPartialView} Render "/var/www/symfony/cache/admin/dev/modules/autoMenu/templates/_list_td_batch_actions.php"
+Dec 04 14:09:59 symfony [info] {sfPartialView} Render "/var/www/symfony/cache/admin/dev/modules/autoMenu/templates/_list_td_tabular.php"
+Dec 04 14:09:59 symfony [info] {Doctrine_Connection_Statement} execute : SELECT m.id AS m__id, m.name AS m__name, m.title AS m__title, m.description AS m__description, m.picture AS m__picture, m.parent_id AS m__parent_id FROM menu_item m WHERE (m.id = ?) - (3)
+Dec 04 14:09:59 symfony [info] {sfPartialView} Render "/var/www/symfony/cache/admin/dev/modules/autoMenu/templates/_list_td_actions.php"
+Dec 04 14:09:59 symfony [info] {sfPartialView} Render "/var/www/symfony/cache/admin/dev/modules/autoMenu/templates/_list_batch_actions.php"
+Dec 04 14:09:59 symfony [info] {sfPartialView} Render "/var/www/symfony/cache/admin/dev/modules/autoMenu/templates/_list_actions.php"
+Dec 04 14:09:59 symfony [info] {sfPartialView} Render "/var/www/symfony/cache/admin/dev/modules/autoMenu/templates/_list_footer.php"
+Dec 04 14:09:59 symfony [info] {sfPHPView} Decorate content with "/var/www/symfony/apps/admin/templates/layout.php"
+Dec 04 14:09:59 symfony [info] {sfPHPView} Render "/var/www/symfony/apps/admin/templates/layout.php"
+Dec 04 14:09:59 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Dec 04 14:09:59 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 04 14:09:59 symfony [info] {sfWebDebugLogger} Configuration 235.46 ms (12)
+Dec 04 14:09:59 symfony [info] {sfWebDebugLogger} Factories 157.36 ms (1)
+Dec 04 14:09:59 symfony [info] {sfWebDebugLogger} Action "menu/index" 211.77 ms (1)
+Dec 04 14:09:59 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.02 ms (7)
+Dec 04 14:09:59 symfony [info] {sfWebDebugLogger} View "Success" for "menu/index" 452.57 ms (1)
+Dec 04 14:09:59 symfony [info] {sfWebDebugLogger} Partial "menu/_assets" 0.39 ms (1)
+Dec 04 14:09:59 symfony [info] {sfWebDebugLogger} Partial "menu/_flashes" 0.38 ms (1)
+Dec 04 14:09:59 symfony [info] {sfWebDebugLogger} Partial "menu/_list_header" 0.32 ms (1)
+Dec 04 14:09:59 symfony [info] {sfWebDebugLogger} Partial "menu/_filters" 105.89 ms (1)
+Dec 04 14:09:59 symfony [info] {sfWebDebugLogger} Partial "menu/_filters_field" 100.92 ms (5)
+Dec 04 14:09:59 symfony [info] {sfWebDebugLogger} Partial "menu/_list" 261.61 ms (1)
+Dec 04 14:09:59 symfony [info] {sfWebDebugLogger} Partial "menu/_list_th_tabular" 0.91 ms (1)
+Dec 04 14:09:59 symfony [info] {sfWebDebugLogger} Partial "menu/_list_td_batch_actions" 1.54 ms (4)
+Dec 04 14:09:59 symfony [info] {sfWebDebugLogger} Partial "menu/_list_td_tabular" 201.76 ms (4)
+Dec 04 14:09:59 symfony [info] {sfWebDebugLogger} Partial "menu/_list_td_actions" 4.58 ms (4)
+Dec 04 14:09:59 symfony [info] {sfWebDebugLogger} Partial "menu/_list_batch_actions" 0.66 ms (1)
+Dec 04 14:09:59 symfony [info] {sfWebDebugLogger} Partial "menu/_list_actions" 0.46 ms (1)
+Dec 04 14:09:59 symfony [info] {sfWebDebugLogger} Partial "menu/_list_footer" 0.32 ms (1)
+Dec 04 14:09:59 symfony [info] {sfWebResponse} Send content (94165 o)

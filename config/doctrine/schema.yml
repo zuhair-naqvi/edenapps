@@ -1,0 +1,13 @@
+MenuItem:
+  columns:
+    name: {type: string(255)}
+    title: {type: string(255)}
+    description: {type: clob}
+    picture: {type: string(255)}
+    parent_id: {type: integer}
+  relations:
+    Parent:
+      class: MenuItem
+      local: parent_id
+      foreign: id
+      foreignAlias: Children
