@@ -3,9 +3,26 @@
 
 # default values
 all:
-sf_admin_theme_jroller_plugin:
-    web_dir:      /sfAdminThemejRollerPlugin # specify your folder where to pick jquery and jquery UI.
-    use_jquery:   true # default. use the packaged jquery/UI
-    theme_dir:    /sfAdminThemejRollerPlugin # default. change the theme directory
-    theme:        aristo 
-    css_reset:    true # default. reset default css (from Blueprint CSS)
+  sf_admin_theme_jroller_plugin:
+    # specify the folder where to pick jQuery / jQuery UI / stylesheets
+    web_dir:        /sfAdminThemejRollerPlugin
+
+    # use the javascript packaged jQuery / jQuery UI of plugin
+    # you can turn use_jquery to false and include your own lib version
+    use_jquery:     true
+
+    # specify the jQuery UI theme folder
+    theme_dir:      /sfAdminThemejRollerPlugin/css/jquery
+
+    # ThemeRoller name
+    # (depends on theme_dir option)
+    # browse: http://jqueryui.com/themeroller/
+    theme:          eggplant
+
+    # activates the jQuery UI widget to dynamically change theme
+    # http://jqueryui.com/docs/Theming/ThemeSwitcher
+    theme_switcher: false
+
+    # default. reset default CSS (from Blueprint CSS)
+    css_reset:      true
+
