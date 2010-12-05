@@ -1,5 +1,23 @@
-# You can find more information about this file on the symfony website:
-# http://www.symfony-project.org/reference/1_4/en/11-App
+all:
+  sf_admin_theme_jroller_plugin:
+    # specify the folder where to pick jQuery / jQuery UI / stylesheets
+    web_dir:        /sfAdminThemejRollerPlugin
 
-# default values
-#all:
+    # use the javascript packaged jQuery / jQuery UI of plugin
+    # you can turn use_jquery to false and include your own lib version
+    use_jquery:     true
+
+    # specify the jQuery UI theme folder
+    theme_dir:      /sfAdminThemejRollerPlugin/css/jquery
+
+    # ThemeRoller name
+    # (depends on theme_dir option)
+    # browse: http://jqueryui.com/themeroller/
+    theme:          aristo
+
+    # activates the jQuery UI widget to dynamically change theme
+    # http://jqueryui.com/docs/Theming/ThemeSwitcher
+    theme_switcher: false
+
+    # default. reset default CSS (from Blueprint CSS)
+    css_reset:      true

@@ -88,9 +88,9 @@ MenuItem:
     picture: null
     Parent: MenuItem_10
   MenuItem_16:
-    name: 'Waipara Hills ‰Û÷Soul of the South‰Ûª Pinot Noir, Waipara, NZ'
-    title: 'Waipara Hills ‰Û÷Soul of the South‰Ûª Pinot Noir, Waipara, NZ'
-    description: 'Waipara Hills ‰Û÷Soul of the South‰Ûª Pinot Noir, Waipara, NZ'
+    name: 'Waipara Hills â€˜Soul of the Southâ€™ Pinot Noir, Waipara, NZ'
+    title: 'Waipara Hills â€˜Soul of the Southâ€™ Pinot Noir, Waipara, NZ'
+    description: 'Waipara Hills â€˜Soul of the Southâ€™ Pinot Noir, Waipara, NZ'
     picture: 0d5d91565c99cc1c5000663e99b6006b5b53b1c3.jpg
     Parent: MenuItem_11
   MenuItem_17:
