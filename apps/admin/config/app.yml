@@ -2,4 +2,10 @@
 # http://www.symfony-project.org/reference/1_4/en/11-App
 
 # default values
-#all:
+all:
+sf_admin_theme_jroller_plugin:
+    web_dir:      /sfAdminThemejRollerPlugin # specify your folder where to pick jquery and jquery UI.
+    use_jquery:   true # default. use the packaged jquery/UI
+    theme_dir:    /sfAdminThemejRollerPlugin # default. change the theme directory
+    theme:        aristo 
+    css_reset:    true # default. reset default css (from Blueprint CSS)
