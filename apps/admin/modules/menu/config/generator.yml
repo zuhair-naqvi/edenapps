@@ -14,9 +14,11 @@ generator:
     config:
       actions: ~
       fields:  ~
-      list:    
+      list:
+        title:   Food and Drinks
         display: [Name, Title, Parent]
       filter:  ~
       form:    ~
       edit:    ~
-      new:     ~
+      new:     
+        title:  New Food and Drinks Item

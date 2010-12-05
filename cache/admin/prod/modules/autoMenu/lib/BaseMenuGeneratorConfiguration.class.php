@@ -73,7 +73,7 @@ class BaseMenuGeneratorConfiguration extends sfModelGeneratorConfiguration
 
   public function getListTitle()
   {
-    return 'Menu List';
+    return 'Food and Drinks';
   }
 
   public function getEditTitle()
@@ -83,7 +83,7 @@ class BaseMenuGeneratorConfiguration extends sfModelGeneratorConfiguration
 
   public function getNewTitle()
   {
-    return 'New Menu';
+    return 'New Food and Drinks Item';
   }
 
   public function getFilterDisplay()

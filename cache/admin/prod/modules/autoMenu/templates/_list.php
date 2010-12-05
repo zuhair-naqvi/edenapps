@@ -7,7 +7,7 @@
         <a href="#sf_admin_filter" id="sf_admin_filter_button" class="fg-button ui-state-default fg-button-icon-left ui-corner-left"><?php echo UIHelper::addIconByConf('filters') . __('Filters', array(), 'sf_admin') ?></a>
         <?php echo link_to(UIHelper::addIconByConf('reset') . __('Reset', array(), 'sf_admin'), 'menu_item_collection', array('action' => 'filter'), array('query_string' => '_reset', 'method' => 'post', 'class' => 'fg-button ui-state-default fg-button-icon-left ui-corner-right')) ?></span>
       </div>
-            <h1><span class="ui-icon ui-icon-triangle-1-s"></span> <?php echo __('Menu List', array(), 'messages') ?></h1>
+            <h1><span class="ui-icon ui-icon-triangle-1-s"></span> <?php echo __('Food and Drinks', array(), 'messages') ?></h1>
     </caption>
     <tbody>
       <tr class="sf_admin_row ui-widget-content">
@@ -27,7 +27,7 @@
         <?php $isDisabledResetButton = ($hasFilters->getRawValue()) ? '' : ' ui-state-disabled' ?>
         <?php echo link_to(UIHelper::addIconByConf('reset') . __('Reset', array(), 'sf_admin'), 'menu_item_collection', array('action' => 'filter'), array('query_string' => '_reset', 'method' => 'post', 'class' => 'fg-button ui-state-default fg-button-icon-left ui-corner-right'.$isDisabledResetButton)) ?></span>
       </div>
-            <h1><span class="ui-icon ui-icon-triangle-1-s"></span> <?php echo __('Menu List', array(), 'messages') ?></h1>
+            <h1><span class="ui-icon ui-icon-triangle-1-s"></span> <?php echo __('Food and Drinks', array(), 'messages') ?></h1>
     </caption>
 
     <thead class="ui-widget-header">
