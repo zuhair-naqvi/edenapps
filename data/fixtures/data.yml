@@ -1,3 +1,32 @@
+sfGuardUser:
+  sfGuardUser_1:
+    first_name: null
+    last_name: null
+    email_address: james@deepeast.com.au
+    username: james
+    algorithm: sha1
+    salt: 74096d1a7042bef55701fed6981b633c
+    password: 45d216f94c78210177bc5ac30bb8dcb62c9ea4d3
+    is_active: true
+    is_super_admin: false
+    last_login: '2010-12-27 09:31:24'
+    created_at: '2010-12-04 17:43:11'
+    updated_at: '2010-12-27 09:31:24'
+sfGuardRememberKey:
+  sfGuardRememberKey_1:
+    User: sfGuardUser_1
+    remember_key: nlvg04gfn80ck8kksksoc0k8osgkg8o
+    ip_address: 203.206.164.179
+    created_at: '2010-12-06 03:05:26'
+    updated_at: '2010-12-06 03:05:26'
+Members:
+  Members_1:
+    name: Zuhair
+    level: Staff
+    email: hi.zuhair@gmail.com
+    last_login: null
+    created_at: '2010-12-26 05:06:05'
+    updated_at: '2010-12-27 07:05:06'
 MenuItem:
   MenuItem_1:
     name: Food
@@ -12,90 +41,197 @@ MenuItem:
     Parent: MenuItem_1
   MenuItem_3:
     name: Mondays
-    title: Mondays
-    description: ''
-    picture: ''
+    title: 'Mondays ~ $15 Parma & a Pot'
+    description: 'Vote #1 Best Parma in town!'
+    picture: dfaf5775e80854f864c3aa03e96debc2662a1fdc.jpg
     Parent: MenuItem_2
   MenuItem_4:
-    name: Pots
-    title: '$15 Parma and Pot'
-    description: 'Vote #1 - Best Chicken Parma in Town!'
-    picture: 9d4f70f784e82c55ee7a78e2bb6b0c64a3e09171.jpg
-    Parent: MenuItem_3
-  MenuItem_5:
     name: Tuesdays
-    title: Tuesdays
-    description: ''
-    picture: null
+    title: 'Tuesdays ~ $14 Steak Night'
+    description: "A 200gm premium Porterhouse steak, cooked to your liking, with chips & salad\r\n\r\nall for only $14... \r\n\r\nCan't beat that!"
+    picture: 3ee05cfca1063251d3ffc076a7f8211b1cceda0d.jpg
     Parent: MenuItem_2
-  MenuItem_6:
-    name: steaknight
-    title: '$14 Steak Night'
-    description: '250gm porterhouse steak with chips & salad'
-    picture: 72f60a838ec91a0ba9a88b96e782400cd3c52368.jpg
-    Parent: MenuItem_5
-  MenuItem_7:
+  MenuItem_5:
     name: Wine
     title: Wine
     description: ''
     picture: null
-  MenuItem_8:
+  MenuItem_6:
     name: 'Champagne and Sparkling'
     title: 'Champagne and Sparkling '
     description: ''
     picture: null
-    Parent: MenuItem_7
-  MenuItem_9:
+    Parent: MenuItem_5
+  MenuItem_7:
     name: 'White Wine'
     title: 'White Wine'
     description: ''
     picture: null
-    Parent: MenuItem_7
-  MenuItem_10:
+    Parent: MenuItem_5
+  MenuItem_8:
     name: Rose
     title: Rose
     description: ''
     picture: null
-    Parent: MenuItem_7
-  MenuItem_11:
+    Parent: MenuItem_5
+  MenuItem_9:
     name: 'Red Wines'
     title: 'Red Wines'
     description: ''
     picture: null
-    Parent: MenuItem_7
-  MenuItem_12:
+    Parent: MenuItem_5
+  MenuItem_10:
     name: 'Dessert Wines'
     title: 'Dessert Wines'
     description: ''
     picture: null
+    Parent: MenuItem_5
+  MenuItem_11:
+    name: 'Pierre de Ville Brut Reserve, NV France'
+    title: 'Pierre de Ville Brut Reserve Glass $7.50'
+    description: "Pierre de Ville Brut Reserve, NV France.\r\n\r\nGlass $7.50  \r\n\r\nBottle $32.00"
+    picture: a5e9b21325f3a05854e05e4f842c1749ee371904.jpg
+    Parent: MenuItem_6
+  MenuItem_12:
+    name: 'Rocky Gully Riesling, 2009 Frankland River, WA'
+    title: 'Rocky Gully Riesling, 2009  Glass $8'
+    description: "Rocky Gully Riesling, 2009 \r\nFrankland River, WA\r\n\r\nGlass $8\r\n\r\nBottle $37"
+    picture: 63247da8814bcbdb5fd1b150ff5ed8579c066477.jpg
     Parent: MenuItem_7
   MenuItem_13:
-    name: 'Pierre de Ville Brut Reserve, NV France'
-    title: 'Pierre de Ville Brut Reserve, NV France'
-    description: 'Pierre de Ville Brut Reserve, NV France.'
-    picture: a5e9b21325f3a05854e05e4f842c1749ee371904.jpg
-    Parent: MenuItem_8
-  MenuItem_14:
-    name: 'Rocky Gully Riesling, 2009 Frankland River, WA'
-    title: 'Rocky Gully Riesling, 2009 Frankland River, WA'
-    description: 'Rocky Gully Riesling, 2009 Frankland River, WA'
-    picture: 0066c5f793dce454f73c9d6f40c33589cfe23590.jpg
-    Parent: MenuItem_9
-  MenuItem_15:
     name: 'Wirra Wirra ''Mrs Wrigley'' Rose, 2009 McLaren Vale, SA'
     title: 'Wirra Wirra ''Mrs Wrigley'' Rose, 2009 McLaren Vale, SA'
     description: 'Wirra Wirra ''Mrs Wrigley'' Rose, 2009 McLaren Vale, SA'
     picture: null
-    Parent: MenuItem_10
-  MenuItem_16:
+    Parent: MenuItem_8
+  MenuItem_14:
     name: 'Waipara Hills ‘Soul of the South’ Pinot Noir, Waipara, NZ'
     title: 'Waipara Hills ‘Soul of the South’ Pinot Noir, Waipara, NZ'
     description: 'Waipara Hills ‘Soul of the South’ Pinot Noir, Waipara, NZ'
     picture: 0d5d91565c99cc1c5000663e99b6006b5b53b1c3.jpg
-    Parent: MenuItem_11
-  MenuItem_17:
+    Parent: MenuItem_9
+  MenuItem_15:
     name: 'Cookoothama Botrytis Semillon, 2007 (375ml) Riverin'
     title: 'Cookoothama Botrytis Semillon, 2007 (375ml) Riverin'
     description: 'Cookoothama Botrytis Semillon, 2007 (375ml) Riverin'
     picture: 950e6323e19c457a4766fe930bdb3ef633d20c5a.jpg
-    Parent: MenuItem_12
+    Parent: MenuItem_10
+  MenuItem_16:
+    name: 'Jansz Brut ''Premium'', NV Pipers River, Tas'
+    title: 'Jansz Brut ''Premium''  Glass $12.50'
+    description: "Jansz Brut 'Premium', NV Pipers River, Tas\r\n\r\nGlass $8.00    \r\n\r\nBottle $53.00"
+    picture: 309abe9256f2188dd78ae197c3d72abe12ed1e5f.jpg
+    Parent: MenuItem_6
+  MenuItem_17:
+    name: 'Carpene Malvolti Prosecco DOC, NV Conegliano, Italy'
+    title: 'Carpene Malvolti Prosecco DOC Glass $9.00'
+    description: "Carpene Malvolti Prosecco DOC, NV Conegliano, Italy\r\n\r\nGlass $9.00\r\n\r\nBottle $45.00"
+    picture: 8962a9983889575cbfc6fdc70eef84f511505efd.jpg
+    Parent: MenuItem_6
+  MenuItem_18:
+    name: 'Bar Snacks'
+    title: 'Bar Snacks'
+    description: ''
+    picture: null
+    Parent: MenuItem_1
+  MenuItem_19:
+    name: 'Smoked almonds $5'
+    title: 'Smoked almonds $5'
+    description: 'Smoked almonds $5'
+    picture: 2e7fc533bd73360212b55d2599f28e02969ff764.jpg
+    Parent: MenuItem_18
+  MenuItem_20:
+    name: 'Marinated olives $6'
+    title: 'Marinated olives $6'
+    description: 'Marinated olives $6'
+    picture: 04c9ead1a37049438f0a929c4c39385c6ef25392.jpg
+    Parent: MenuItem_18
+  MenuItem_21:
+    name: 'Moët & Chandon Brut Imperial, NV Epernay, France $150'
+    title: 'Moët & Chandon Brut Imperial'
+    description: "Moët & Chandon Brut Imperial, \r\nNV Epernay, France\r\n\r\nBottle $150"
+    picture: b1b75700920f41ef18e050869f7944213794d955.jpg
+    Parent: MenuItem_6
+  MenuItem_22:
+    name: 'Moët & Chandon Brut Rose, 2003 Epernay, France 	  190'
+    title: 'Moët & Chandon Brut Rose, 2003'
+    description: "Moët & Chandon Brut Rose, 2003 Epernay, France\r\n\r\nBottle $190"
+    picture: 19da17bdde9626c408905b2d00758ab22e3aaac2.jpg
+    Parent: MenuItem_6
+  MenuItem_23:
+    name: 'Bollinger ''Special Cuvee'', NV Ay, France          	  200'
+    title: 'Bollinger ''Special Cuvee'''
+    description: "Bollinger 'Special Cuvee', NV Ay, France         \r\n	\r\nBottle $200"
+    picture: 4d495bec0780fb05e5019219f560390cc0727f1b.jpg
+    Parent: MenuItem_6
+  MenuItem_24:
+    name: 'Dining Room'
+    title: 'Dining Room'
+    description: ''
+    picture: null
+    Parent: MenuItem_1
+  MenuItem_25:
+    name: 'Oysters natural  - shucked to order  (½ dozen) $14 '
+    title: 'Oysters natural  -  (½ dozen) $14'
+    description: "Oysters natural  - shucked to order  \r\n(½ dozen) \r\n\r\n$14"
+    picture: null
+    Parent: MenuItem_24
+  MenuItem_26:
+    name: 'Half shell spring bay scallops baked with potato aioli and breadcrumbs $13'
+    title: 'Half shell spring bay scallops $13'
+    description: "Half shell spring bay scallops baked with potato aioli and breadcrumbs \r\n\r\n$13"
+    picture: null
+    Parent: MenuItem_24
+  MenuItem_27:
+    name: 'Oysters natural - shucked to order (½ dozen) $14 '
+    title: 'Oysters natural - (½ dozen) $14 '
+    description: "Oysters natural - shucked to order (½ dozen) \r\n\r\n$14 "
+    picture: f9c8bcd07fba08784e61dd50a873de5e11726654.jpg
+    Parent: MenuItem_18
+  MenuItem_28:
+    name: 'Ginger and soy glazed chicken wings with wasabi mayo $9'
+    title: 'Ginger and soy glazed chicken wings $9'
+    description: "Ginger and soy glazed chicken wings with wasabi mayo \r\n\r\n$9"
+    picture: null
+    Parent: MenuItem_18
+  MenuItem_29:
+    name: 'Calabrese salami with olives $8'
+    title: 'Calabrese salami with olives $8'
+    description: "Calabrese salami with olives \r\n\r\n$8"
+    picture: 0038bb382b092bd1516abafd67458712e94ea7d2.jpg
+    Parent: MenuItem_18
+  MenuItem_30:
+    name: 'Chicken liver pate with candied walnuts, sauternes jelly and brioche $8.50'
+    title: 'Chicken liver pate $8.50'
+    description: "Chicken liver pate with candied walnuts, sauternes jelly and brioche \r\n\r\n$8.50"
+    picture: null
+    Parent: MenuItem_18
+  MenuItem_31:
+    name: 'Spiced calamari and piperade $12'
+    title: 'Spiced calamari and piperade $12'
+    description: "Spiced calamari and piperade \r\n\r\n$12"
+    picture: 7a046aee149308b1662d2d8c735b9a312e61a4d8.jpg
+    Parent: MenuItem_18
+  MenuItem_32:
+    name: 'Crispy pork with aioli and salsa verde $9'
+    title: 'Crispy pork with aioli $9'
+    description: "Crispy pork with aioli and salsa verde \r\n\r\n$9"
+    picture: 1673776edd3e0e9cd1266aa5fc02c449f2d24c14.jpg
+    Parent: MenuItem_18
+  MenuItem_33:
+    name: 'Crawford River Riesling, 2008 Western District, VIC 	  66'
+    title: 'Crawford River Riesling, 2008  Glass $9'
+    description: "Crawford River Riesling, 2008 \r\nWestern District, VIC\r\n	\r\nGlass $9\r\n\r\nBottle $66"
+    picture: 920e2eded72f220324a5c016e7fd93cd6f56d6f6.jpg
+    Parent: MenuItem_7
+  MenuItem_34:
+    name: 'Lucky Cat Pinot Grigio, King Valley, Vic   	  40'
+    title: 'Lucky Cat Pinot Grigio  Glass $8'
+    description: "Lucky Cat Pinot Grigio, King Valley, Vic  \r\n\r\nGlass $8	\r\n\r\nBottle $40"
+    picture: 3729856cbff9d80d375177877d2ae21c68e0e6f2.jpg
+    Parent: MenuItem_7
+Box:
+  Box_1:
+    title: 'Pure Blonde'
+    description: 'Test Description Hello James'
+    picture: d08d68452a88628479e17c907c1151802e3399ac.jpg

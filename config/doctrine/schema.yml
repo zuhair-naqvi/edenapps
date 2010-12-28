@@ -11,3 +11,32 @@ MenuItem:
       local: parent_id
       foreign: id
       foreignAlias: Children
+Box:
+  columns:
+    title: {type: string(255)}
+    description: {type: clob}
+    picture: {type: string(255)}
+Members:
+  actAs: [Timestampable]
+  columns:
+    name: {type: string(255)}
+    level: {type: enum, values: [Bronze, Silver, Gold, Staff], default: 'Bronze'}
+    email: {type: string(255), unique: true}
+    last_login: {type: timestamp}
+ShitsMeList:
+  columns:
+    title: {type: string(255)}
+    description: {type: string(255)}
+Roster:
+  actAs: [Timestampable]
+  columns:
+    member_id: {type: integer}
+    monday: {type: string(255)}
+    tuesday: {type: string(255)}
+    wednesday: {type: string(255)}
+    thursday: {type: string(255)}
+    friday: {type: string(255)}
+    saturday: {type: string(255)}
+    sunday: {type: string(255)}
+  relations:
+    Member: {class: Members, local: member_id, foreign: id, type: one, foreignType: many, foreignAlias: Rosters}

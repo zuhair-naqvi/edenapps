@@ -95,7 +95,7 @@ EOD;
 	  					'key1' => 'ItemDesc',
 	  					'string1' => htmlspecialchars($item->getDescription()),
   						'key2' => 'ItemPic',
-  						'string2' => $item->getPicture()
+  						'string2' => 'uploads/images/menu/'.$item->getPicture()
 	  			);
   		}
   	}

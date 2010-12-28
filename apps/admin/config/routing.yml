@@ -1,3 +1,39 @@
+roster:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                Roster
+    module:               roster
+    prefix_path:          /roster
+    column:               id
+    with_wildcard_routes: true
+
+shits_me_list:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                ShitsMeList
+    module:               shitsmelist
+    prefix_path:          /shitsmelist
+    column:               id
+    with_wildcard_routes: true
+
+members:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                Members
+    module:               members
+    prefix_path:          /members
+    column:               id
+    with_wildcard_routes: true
+
+box:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                Box
+    module:               box
+    prefix_path:          /box
+    column:               id
+    with_wildcard_routes: true
+
 menu_item:
   class: sfDoctrineRouteCollection
   options:

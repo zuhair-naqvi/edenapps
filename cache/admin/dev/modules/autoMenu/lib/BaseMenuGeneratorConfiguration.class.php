@@ -6,10 +6,20 @@
  * @package    ##PROJECT_NAME##
  * @subpackage menu
  * @author     ##AUTHOR_NAME##
- * @version    SVN: $Id: configuration.php 24171 2009-11-19 16:37:50Z Kris.Wallsmith $
+ * @version    SVN: $Id: configuration.php 12474 2008-10-31 10:41:27Z fabien $
  */
-abstract class BaseMenuGeneratorConfiguration extends sfModelGeneratorConfiguration
+class BaseMenuGeneratorConfiguration extends sfModelGeneratorConfiguration
 {
+  public function getCredentials($action)
+  {
+    if (0 === strpos($action, '_'))
+    {
+      $action = substr($action, 1);
+    }
+
+    return isset($this->configuration['credentials'][$action]) ? $this->configuration['credentials'][$action] : array();
+  }
+
   public function getActionsDefault()
   {
     return array();
@@ -27,11 +37,17 @@ abstract class BaseMenuGeneratorConfiguration extends sfModelGeneratorConfigurat
 
   public function getEditActions()
   {
+		//  added show view
+	  // return array(  '_delete' => NULL,  '_list' => NULL,  '_show' => NULL,  '_save' => NULL,  '_save_and_add' => NULL,);
+  
     return array();
   }
 
   public function getListObjectActions()
   {
+		// =============== Added show view
+	  return array(  '_show' => NULL,  '_edit' => NULL,  '_delete' => NULL,);
+  
     return array(  '_edit' => NULL,  '_delete' => NULL,);
   }
 
@@ -57,7 +73,7 @@ abstract class BaseMenuGeneratorConfiguration extends sfModelGeneratorConfigurat
 
   public function getListTitle()
   {
-    return 'Menu List';
+    return 'Food and Drinks';
   }
 
   public function getEditTitle()
@@ -67,7 +83,7 @@ abstract class BaseMenuGeneratorConfiguration extends sfModelGeneratorConfigurat
 
   public function getNewTitle()
   {
-    return 'New Menu';
+    return 'New Food and Drinks Item';
   }
 
   public function getFilterDisplay()
@@ -155,6 +171,18 @@ abstract class BaseMenuGeneratorConfiguration extends sfModelGeneratorConfigurat
     );
   }
 
+  public function getFieldsShow()
+  {
+    return array(
+      'id' => array(),
+      'name' => array(),
+      'title' => array(),
+      'description' => array(),
+      'picture' => array(),
+      'parent_id' => array(),
+    );
+  }
+
   public function getFieldsNew()
   {
     return array(
@@ -178,6 +206,11 @@ abstract class BaseMenuGeneratorConfiguration extends sfModelGeneratorConfigurat
     return 'MenuItemForm';
   }
 
+  public function getFormOptions()
+  {
+    return array();
+  }
+
   public function hasFilterForm()
   {
     return true;
@@ -191,6 +224,77 @@ abstract class BaseMenuGeneratorConfiguration extends sfModelGeneratorConfigurat
   public function getFilterFormClass()
   {
     return 'MenuItemFormFilter';
+  }
+
+	  protected function getConfig()
+  {
+    $configuration = parent::getConfig();
+    $configuration['show'] = $this->getFieldsShow();
+    return $configuration;
+  }
+
+  protected function compile()
+  {
+    parent::compile();
+    
+    $config = $this->getConfig();
+    
+    // add configuration for the show view 
+    $this->configuration['show'] = array( 'fields'         => array(),
+                                          'title'          => $this->getShowTitle(),
+                                          'actions'        => $this->getShowActions(),
+                                          'display'        => $this->getShowDisplay(),
+                                        ) ;
+
+    foreach (array('show') as $context)
+    {
+      foreach ($this->configuration[$context]['actions'] as $action => $parameters)
+      {
+        $this->configuration[$context]['actions'][$action] = $this->fixActionParameters($action, $parameters);
+      }
+    }
+
+
+  }
+
+  public function getShowActions()
+  {
+    return array(  '_list' => NULL,  '_edit' => NULL, '_delete' => NULL);
+  }
+
+  
+  public function getShowTitle()
+  {
+    return 'View Menu';
+  }
+
+  public function getShowDisplay()
+  {
+      return array(  0 => 'id',  1 => 'name',  2 => 'title',  3 => 'description',  4 => 'picture',  5 => 'parent_id',);
+  }
+
+  public function getFilterForm($filters)
+  {
+    $class = $this->getFilterFormClass();
+
+    return new $class($filters, $this->getFilterFormOptions());
+  }
+
+  public function getFilterFormOptions()
+  {
+    return array();
+  }
+
+  public function getFilterDefaults()
+  {
+    return array();
+  }
+
+  public function getPager($model)
+  {
+    $class = $this->getPagerClass();
+
+    return new $class($model, $this->getPagerMaxPerPage());
   }
 
   public function getPagerClass()
@@ -216,5 +320,10 @@ abstract class BaseMenuGeneratorConfiguration extends sfModelGeneratorConfigurat
   public function getTableCountMethod()
   {
     return '';
+  }
+
+  public function getConnection()
+  {
+    return null;
   }
 }
