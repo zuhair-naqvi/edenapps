@@ -9779,3 +9779,151 @@ Dec 28 06:35:59 symfony [info] {sfWebDebugLogger} Action "roster/index" 138.62 m
 Dec 28 06:35:59 symfony [info] {sfWebDebugLogger} Action "default/module" 0.09 ms (1)
 Dec 28 06:35:59 symfony [info] {sfWebDebugLogger} View "Success" for "default/module" 136.32 ms (1)
 Dec 28 06:35:59 symfony [info] {sfWebResponse} Send content (31428 o)
+Dec 28 08:11:14 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /roster/id/1000 with parameters array (  'module' => 'roster',  'action' => 'id',  1000 => true,)
+Dec 28 08:11:15 symfony [info] {sfFrontWebController} Action "roster/id" does not exist
+Dec 28 08:11:15 symfony [err] {sfError404Exception} Action "roster/id" does not exist.
+Dec 28 08:11:15 symfony [info] {sfWebResponse} Send status "HTTP/1.1 404 Not Found"
+Dec 28 08:11:15 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 28 08:11:15 symfony [info] {sfWebDebugLogger} Configuration 0.50 ms (5)
+Dec 28 08:11:15 symfony [info] {sfWebDebugLogger} Factories 132.83 ms (1)
+Dec 28 08:11:22 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /roster with parameters array (  'module' => 'roster',  'action' => 'index',)
+Dec 28 08:11:22 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 28 08:11:22 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 28 08:11:22 symfony [info] {rosterActions} Call "rosterActions->executeIndex()"
+Dec 28 08:11:22 symfony [info] {rosterActions} Forward to action "default/module"
+Dec 28 08:11:23 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 28 08:11:23 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 28 08:11:23 symfony [info] {defaultActions} Call "defaultActions->executeModule()"
+Dec 28 08:11:23 symfony [info] {sfPHPView} Render "/usr/share/php/symfony/lib/controller/default/templates/moduleSuccess.php"
+Dec 28 08:11:23 symfony [info] {sfPHPView} Decorate content with "/usr/share/php/symfony/lib/controller/default/templates/defaultLayout.php"
+Dec 28 08:11:23 symfony [info] {sfPHPView} Render "/usr/share/php/symfony/lib/controller/default/templates/defaultLayout.php"
+Dec 28 08:11:23 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Dec 28 08:11:23 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 28 08:11:23 symfony [info] {sfWebDebugLogger} Configuration 1.24 ms (12)
+Dec 28 08:11:23 symfony [info] {sfWebDebugLogger} Factories 236.25 ms (1)
+Dec 28 08:11:23 symfony [info] {sfWebDebugLogger} Action "roster/index" 99.47 ms (1)
+Dec 28 08:11:23 symfony [info] {sfWebDebugLogger} Action "default/module" 0.10 ms (1)
+Dec 28 08:11:23 symfony [info] {sfWebDebugLogger} View "Success" for "default/module" 7.56 ms (1)
+Dec 28 08:11:23 symfony [info] {sfWebResponse} Send content (31412 o)
+Dec 28 08:11:31 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /roster/plist/id/1000 with parameters array (  'module' => 'roster',  'action' => 'plist',  'id' => '1000',)
+Dec 28 08:11:31 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 28 08:11:31 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 28 08:11:31 symfony [info] {rosterActions} Call "rosterActions->executePlist()"
+Dec 28 08:11:31 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Dec 28 08:11:31 symfony [info] {Doctrine_Connection_Statement} execute : SELECT r.id AS r__id, r.member_id AS r__member_id, r.monday AS r__monday, r.tuesday AS r__tuesday, r.wednesday AS r__wednesday, r.thursday AS r__thursday, r.friday AS r__friday, r.saturday AS r__saturday, r.sunday AS r__sunday, r.created_at AS r__created_at, r.updated_at AS r__updated_at FROM roster r WHERE (r.member_id = ?) - (1000)
+Dec 28 08:11:31 symfony [err] {sfWebDebugLogger}  Error at /var/www/symfony/apps/front/modules/roster/actions/actions.class.php on line 82 (Argument 1 passed to rosterActions::buildPlistData() must be an instance of Doctrine_Collection, boolean given, called in /var/www/symfony/apps/front/modules/roster/actions/actions.class.php on line 31 and defined)
+Dec 28 08:12:41 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /roster/plist/id/1000 with parameters array (  'module' => 'roster',  'action' => 'plist',  'id' => '1000',)
+Dec 28 08:12:41 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 28 08:12:41 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 28 08:12:41 symfony [info] {rosterActions} Call "rosterActions->executePlist()"
+Dec 28 08:12:42 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Dec 28 08:12:42 symfony [info] {Doctrine_Connection_Statement} execute : SELECT r.id AS r__id, r.member_id AS r__member_id, r.monday AS r__monday, r.tuesday AS r__tuesday, r.wednesday AS r__wednesday, r.thursday AS r__thursday, r.friday AS r__friday, r.saturday AS r__saturday, r.sunday AS r__sunday, r.created_at AS r__created_at, r.updated_at AS r__updated_at FROM roster r WHERE (r.member_id = ?) - (1000)
+Dec 28 08:14:27 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /roster/plist/id/1000 with parameters array (  'module' => 'roster',  'action' => 'plist',  'id' => '1000',)
+Dec 28 08:14:27 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 28 08:14:27 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 28 08:14:27 symfony [info] {rosterActions} Call "rosterActions->executePlist()"
+Dec 28 08:14:27 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Dec 28 08:14:27 symfony [info] {Doctrine_Connection_Statement} execute : SELECT r.id AS r__id, r.member_id AS r__member_id, r.monday AS r__monday, r.tuesday AS r__tuesday, r.wednesday AS r__wednesday, r.thursday AS r__thursday, r.friday AS r__friday, r.saturday AS r__saturday, r.sunday AS r__sunday, r.created_at AS r__created_at, r.updated_at AS r__updated_at FROM roster r WHERE (r.member_id = ?) - (1000)
+Dec 28 08:14:32 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /roster/plist/id/1000 with parameters array (  'module' => 'roster',  'action' => 'plist',  'id' => '1000',)
+Dec 28 08:14:32 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 28 08:14:32 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 28 08:14:32 symfony [info] {rosterActions} Call "rosterActions->executePlist()"
+Dec 28 08:14:32 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Dec 28 08:14:32 symfony [info] {Doctrine_Connection_Statement} execute : SELECT r.id AS r__id, r.member_id AS r__member_id, r.monday AS r__monday, r.tuesday AS r__tuesday, r.wednesday AS r__wednesday, r.thursday AS r__thursday, r.friday AS r__friday, r.saturday AS r__saturday, r.sunday AS r__sunday, r.created_at AS r__created_at, r.updated_at AS r__updated_at FROM roster r WHERE (r.member_id = ?) - (1000)
+Dec 28 08:16:10 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /roster/plist/id/1000 with parameters array (  'module' => 'roster',  'action' => 'plist',  'id' => '1000',)
+Dec 28 08:16:11 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 28 08:16:11 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 28 08:16:11 symfony [info] {rosterActions} Call "rosterActions->executePlist()"
+Dec 28 08:16:11 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Dec 28 08:16:11 symfony [info] {Doctrine_Connection_Statement} execute : SELECT r.id AS r__id, r.member_id AS r__member_id, r.monday AS r__monday, r.tuesday AS r__tuesday, r.wednesday AS r__wednesday, r.thursday AS r__thursday, r.friday AS r__friday, r.saturday AS r__saturday, r.sunday AS r__sunday, r.created_at AS r__created_at, r.updated_at AS r__updated_at FROM roster r WHERE (r.member_id = ?) - (1000)
+Dec 28 08:16:14 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /roster/plist/id/1000 with parameters array (  'module' => 'roster',  'action' => 'plist',  'id' => '1000',)
+Dec 28 08:16:14 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 28 08:16:14 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 28 08:16:14 symfony [info] {rosterActions} Call "rosterActions->executePlist()"
+Dec 28 08:16:14 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Dec 28 08:16:14 symfony [info] {Doctrine_Connection_Statement} execute : SELECT r.id AS r__id, r.member_id AS r__member_id, r.monday AS r__monday, r.tuesday AS r__tuesday, r.wednesday AS r__wednesday, r.thursday AS r__thursday, r.friday AS r__friday, r.saturday AS r__saturday, r.sunday AS r__sunday, r.created_at AS r__created_at, r.updated_at AS r__updated_at FROM roster r WHERE (r.member_id = ?) - (1000)
+Dec 28 08:18:14 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /roster/plist/id/1000 with parameters array (  'module' => 'roster',  'action' => 'plist',  'id' => '1000',)
+Dec 28 08:18:14 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 28 08:18:14 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 28 08:18:14 symfony [info] {rosterActions} Call "rosterActions->executePlist()"
+Dec 28 08:18:14 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Dec 28 08:18:14 symfony [info] {Doctrine_Connection_Statement} execute : SELECT r.id AS r__id, r.member_id AS r__member_id, r.monday AS r__monday, r.tuesday AS r__tuesday, r.wednesday AS r__wednesday, r.thursday AS r__thursday, r.friday AS r__friday, r.saturday AS r__saturday, r.sunday AS r__sunday, r.created_at AS r__created_at, r.updated_at AS r__updated_at FROM roster r WHERE (r.member_id = ?) - (1000)
+Dec 28 08:19:56 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /roster/plist/id/1000 with parameters array (  'module' => 'roster',  'action' => 'plist',  'id' => '1000',)
+Dec 28 08:19:56 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 28 08:19:56 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 28 08:19:56 symfony [info] {rosterActions} Call "rosterActions->executePlist()"
+Dec 28 08:19:57 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Dec 28 08:19:57 symfony [info] {Doctrine_Connection_Statement} execute : SELECT r.id AS r__id, r.member_id AS r__member_id, r.monday AS r__monday, r.tuesday AS r__tuesday, r.wednesday AS r__wednesday, r.thursday AS r__thursday, r.friday AS r__friday, r.saturday AS r__saturday, r.sunday AS r__sunday, r.created_at AS r__created_at, r.updated_at AS r__updated_at FROM roster r WHERE (r.member_id = ?) - (1000)
+Dec 28 08:24:13 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /roster/plist/id/1000 with parameters array (  'module' => 'roster',  'action' => 'plist',  'id' => '1000',)
+Dec 28 08:24:13 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 28 08:24:13 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 28 08:24:13 symfony [info] {rosterActions} Call "rosterActions->executePlist()"
+Dec 28 08:24:13 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Dec 28 08:24:13 symfony [info] {Doctrine_Connection_Statement} execute : SELECT r.id AS r__id, r.member_id AS r__member_id, r.monday AS r__monday, r.tuesday AS r__tuesday, r.wednesday AS r__wednesday, r.thursday AS r__thursday, r.friday AS r__friday, r.saturday AS r__saturday, r.sunday AS r__sunday, r.created_at AS r__created_at, r.updated_at AS r__updated_at FROM roster r WHERE (r.member_id = ?) - (1000)
+Dec 28 08:55:09 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /roster/plist/id/1000 with parameters array (  'module' => 'roster',  'action' => 'plist',  'id' => '1000',)
+Dec 28 08:55:09 symfony [info] {myUser} Automatic user logout due to timeout
+Dec 28 08:55:09 symfony [info] {myUser} User is not authenticated
+Dec 28 08:55:09 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 28 08:55:09 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 28 08:55:09 symfony [info] {rosterActions} Call "rosterActions->executePlist()"
+Dec 28 08:55:09 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Dec 28 08:55:09 symfony [info] {Doctrine_Connection_Statement} execute : SELECT r.id AS r__id, r.member_id AS r__member_id, r.monday AS r__monday, r.tuesday AS r__tuesday, r.wednesday AS r__wednesday, r.thursday AS r__thursday, r.friday AS r__friday, r.saturday AS r__saturday, r.sunday AS r__sunday, r.created_at AS r__created_at, r.updated_at AS r__updated_at FROM roster r WHERE (r.member_id = ?) - (1000)
+Dec 28 09:06:46 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /roster/plist/id/1 with parameters array (  'module' => 'roster',  'action' => 'plist',  'id' => '1',)
+Dec 28 09:06:46 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 28 09:06:46 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 28 09:06:46 symfony [info] {rosterActions} Call "rosterActions->executePlist()"
+Dec 28 09:06:46 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Dec 28 09:06:46 symfony [info] {Doctrine_Connection_Statement} execute : SELECT r.id AS r__id, r.member_id AS r__member_id, r.monday AS r__monday, r.tuesday AS r__tuesday, r.wednesday AS r__wednesday, r.thursday AS r__thursday, r.friday AS r__friday, r.saturday AS r__saturday, r.sunday AS r__sunday, r.created_at AS r__created_at, r.updated_at AS r__updated_at FROM roster r WHERE (r.member_id = ?) - (1)
+Dec 28 09:07:20 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /member/plist/id/1 with parameters array (  'module' => 'member',  'action' => 'plist',  'id' => '1',)
+Dec 28 09:07:20 symfony [info] {sfFrontWebController} Action "member/plist" does not exist
+Dec 28 09:07:20 symfony [err] {sfError404Exception} Action "member/plist" does not exist.
+Dec 28 09:07:20 symfony [info] {sfWebResponse} Send status "HTTP/1.1 404 Not Found"
+Dec 28 09:07:20 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 28 09:07:20 symfony [info] {sfWebDebugLogger} Configuration 0.50 ms (5)
+Dec 28 09:07:20 symfony [info] {sfWebDebugLogger} Factories 236.61 ms (1)
+Dec 28 09:07:24 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /members/plist/id/1 with parameters array (  'module' => 'members',  'action' => 'plist',  'id' => '1',)
+Dec 28 09:07:24 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 28 09:07:24 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 28 09:07:24 symfony [info] {membersActions} Call "membersActions->executePlist()"
+Dec 28 09:07:25 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Dec 28 09:07:25 symfony [info] {Doctrine_Connection_Statement} execute : SELECT m.id AS m__id, m.name AS m__name, m.level AS m__level, m.email AS m__email, m.last_login AS m__last_login, m.created_at AS m__created_at, m.updated_at AS m__updated_at FROM members m WHERE (m.id = ?) - (1)
+Feb 09 20:41:01 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /menu/plist with parameters array (  'module' => 'menu',  'action' => 'plist',)
+Feb 09 20:41:01 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Feb 09 20:41:01 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Feb 09 20:41:01 symfony [info] {menuActions} Call "menuActions->executePlist()"
+Feb 09 20:41:02 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Feb 09 20:41:02 symfony [info] {Doctrine_Connection_Mysql} query : SELECT m.id AS m__id, m.name AS m__name, m.title AS m__title, m.description AS m__description, m.picture AS m__picture, m.parent_id AS m__parent_id FROM menu_item m WHERE (m.parent_id is NULL) - ()
+Feb 09 20:41:02 symfony [info] {Doctrine_Connection_Statement} execute : SELECT m.id AS m__id, m.name AS m__name, m.title AS m__title, m.description AS m__description, m.picture AS m__picture, m.parent_id AS m__parent_id FROM menu_item m WHERE (m.parent_id IN (?)) - (1)
+Feb 09 20:41:02 symfony [info] {Doctrine_Connection_Statement} execute : SELECT m.id AS m__id, m.name AS m__name, m.title AS m__title, m.description AS m__description, m.picture AS m__picture, m.parent_id AS m__parent_id FROM menu_item m WHERE (m.parent_id IN (?)) - (2)
+Feb 09 20:41:02 symfony [info] {Doctrine_Connection_Statement} execute : SELECT m.id AS m__id, m.name AS m__name, m.title AS m__title, m.description AS m__description, m.picture AS m__picture, m.parent_id AS m__parent_id FROM menu_item m WHERE (m.parent_id IN (?)) - (3)
+Feb 09 20:41:02 symfony [info] {Doctrine_Connection_Statement} execute : SELECT m.id AS m__id, m.name AS m__name, m.title AS m__title, m.description AS m__description, m.picture AS m__picture, m.parent_id AS m__parent_id FROM menu_item m WHERE (m.parent_id IN (?)) - (4)
+Feb 09 20:41:02 symfony [info] {Doctrine_Connection_Statement} execute : SELECT m.id AS m__id, m.name AS m__name, m.title AS m__title, m.description AS m__description, m.picture AS m__picture, m.parent_id AS m__parent_id FROM menu_item m WHERE (m.parent_id IN (?)) - (18)
+Feb 09 20:41:02 symfony [info] {Doctrine_Connection_Statement} execute : SELECT m.id AS m__id, m.name AS m__name, m.title AS m__title, m.description AS m__description, m.picture AS m__picture, m.parent_id AS m__parent_id FROM menu_item m WHERE (m.parent_id IN (?)) - (19)
+Feb 09 20:41:02 symfony [info] {Doctrine_Connection_Statement} execute : SELECT m.id AS m__id, m.name AS m__name, m.title AS m__title, m.description AS m__description, m.picture AS m__picture, m.parent_id AS m__parent_id FROM menu_item m WHERE (m.parent_id IN (?)) - (20)
+Feb 09 20:41:02 symfony [info] {Doctrine_Connection_Statement} execute : SELECT m.id AS m__id, m.name AS m__name, m.title AS m__title, m.description AS m__description, m.picture AS m__picture, m.parent_id AS m__parent_id FROM menu_item m WHERE (m.parent_id IN (?)) - (27)
+Feb 09 20:41:02 symfony [info] {Doctrine_Connection_Statement} execute : SELECT m.id AS m__id, m.name AS m__name, m.title AS m__title, m.description AS m__description, m.picture AS m__picture, m.parent_id AS m__parent_id FROM menu_item m WHERE (m.parent_id IN (?)) - (28)
+Feb 09 20:41:02 symfony [info] {Doctrine_Connection_Statement} execute : SELECT m.id AS m__id, m.name AS m__name, m.title AS m__title, m.description AS m__description, m.picture AS m__picture, m.parent_id AS m__parent_id FROM menu_item m WHERE (m.parent_id IN (?)) - (29)
+Feb 09 20:41:02 symfony [info] {Doctrine_Connection_Statement} execute : SELECT m.id AS m__id, m.name AS m__name, m.title AS m__title, m.description AS m__description, m.picture AS m__picture, m.parent_id AS m__parent_id FROM menu_item m WHERE (m.parent_id IN (?)) - (30)
+Feb 09 20:41:02 symfony [info] {Doctrine_Connection_Statement} execute : SELECT m.id AS m__id, m.name AS m__name, m.title AS m__title, m.description AS m__description, m.picture AS m__picture, m.parent_id AS m__parent_id FROM menu_item m WHERE (m.parent_id IN (?)) - (31)
+Feb 09 20:41:02 symfony [info] {Doctrine_Connection_Statement} execute : SELECT m.id AS m__id, m.name AS m__name, m.title AS m__title, m.description AS m__description, m.picture AS m__picture, m.parent_id AS m__parent_id FROM menu_item m WHERE (m.parent_id IN (?)) - (32)
+Feb 09 20:41:02 symfony [info] {Doctrine_Connection_Statement} execute : SELECT m.id AS m__id, m.name AS m__name, m.title AS m__title, m.description AS m__description, m.picture AS m__picture, m.parent_id AS m__parent_id FROM menu_item m WHERE (m.parent_id IN (?)) - (24)
+Feb 09 20:41:02 symfony [info] {Doctrine_Connection_Statement} execute : SELECT m.id AS m__id, m.name AS m__name, m.title AS m__title, m.description AS m__description, m.picture AS m__picture, m.parent_id AS m__parent_id FROM menu_item m WHERE (m.parent_id IN (?)) - (25)
+Feb 09 20:41:02 symfony [info] {Doctrine_Connection_Statement} execute : SELECT m.id AS m__id, m.name AS m__name, m.title AS m__title, m.description AS m__description, m.picture AS m__picture, m.parent_id AS m__parent_id FROM menu_item m WHERE (m.parent_id IN (?)) - (26)
+Feb 09 20:41:02 symfony [info] {Doctrine_Connection_Statement} execute : SELECT m.id AS m__id, m.name AS m__name, m.title AS m__title, m.description AS m__description, m.picture AS m__picture, m.parent_id AS m__parent_id FROM menu_item m WHERE (m.parent_id IN (?)) - (5)
+Feb 09 20:41:02 symfony [info] {Doctrine_Connection_Statement} execute : SELECT m.id AS m__id, m.name AS m__name, m.title AS m__title, m.description AS m__description, m.picture AS m__picture, m.parent_id AS m__parent_id FROM menu_item m WHERE (m.parent_id IN (?)) - (6)
+Feb 09 20:41:02 symfony [info] {Doctrine_Connection_Statement} execute : SELECT m.id AS m__id, m.name AS m__name, m.title AS m__title, m.description AS m__description, m.picture AS m__picture, m.parent_id AS m__parent_id FROM menu_item m WHERE (m.parent_id IN (?)) - (11)
+Feb 09 20:41:02 symfony [info] {Doctrine_Connection_Statement} execute : SELECT m.id AS m__id, m.name AS m__name, m.title AS m__title, m.description AS m__description, m.picture AS m__picture, m.parent_id AS m__parent_id FROM menu_item m WHERE (m.parent_id IN (?)) - (16)
+Feb 09 20:41:02 symfony [info] {Doctrine_Connection_Statement} execute : SELECT m.id AS m__id, m.name AS m__name, m.title AS m__title, m.description AS m__description, m.picture AS m__picture, m.parent_id AS m__parent_id FROM menu_item m WHERE (m.parent_id IN (?)) - (17)
+Feb 09 20:41:02 symfony [info] {Doctrine_Connection_Statement} execute : SELECT m.id AS m__id, m.name AS m__name, m.title AS m__title, m.description AS m__description, m.picture AS m__picture, m.parent_id AS m__parent_id FROM menu_item m WHERE (m.parent_id IN (?)) - (21)
+Feb 09 20:41:02 symfony [info] {Doctrine_Connection_Statement} execute : SELECT m.id AS m__id, m.name AS m__name, m.title AS m__title, m.description AS m__description, m.picture AS m__picture, m.parent_id AS m__parent_id FROM menu_item m WHERE (m.parent_id IN (?)) - (22)
+Feb 09 20:41:02 symfony [info] {Doctrine_Connection_Statement} execute : SELECT m.id AS m__id, m.name AS m__name, m.title AS m__title, m.description AS m__description, m.picture AS m__picture, m.parent_id AS m__parent_id FROM menu_item m WHERE (m.parent_id IN (?)) - (23)
+Feb 09 20:41:02 symfony [info] {Doctrine_Connection_Statement} execute : SELECT m.id AS m__id, m.name AS m__name, m.title AS m__title, m.description AS m__description, m.picture AS m__picture, m.parent_id AS m__parent_id FROM menu_item m WHERE (m.parent_id IN (?)) - (7)
+Feb 09 20:41:02 symfony [info] {Doctrine_Connection_Statement} execute : SELECT m.id AS m__id, m.name AS m__name, m.title AS m__title, m.description AS m__description, m.picture AS m__picture, m.parent_id AS m__parent_id FROM menu_item m WHERE (m.parent_id IN (?)) - (12)
+Feb 09 20:41:02 symfony [info] {Doctrine_Connection_Statement} execute : SELECT m.id AS m__id, m.name AS m__name, m.title AS m__title, m.description AS m__description, m.picture AS m__picture, m.parent_id AS m__parent_id FROM menu_item m WHERE (m.parent_id IN (?)) - (33)
+Feb 09 20:41:02 symfony [info] {Doctrine_Connection_Statement} execute : SELECT m.id AS m__id, m.name AS m__name, m.title AS m__title, m.description AS m__description, m.picture AS m__picture, m.parent_id AS m__parent_id FROM menu_item m WHERE (m.parent_id IN (?)) - (34)
+Feb 09 20:41:02 symfony [info] {Doctrine_Connection_Statement} execute : SELECT m.id AS m__id, m.name AS m__name, m.title AS m__title, m.description AS m__description, m.picture AS m__picture, m.parent_id AS m__parent_id FROM menu_item m WHERE (m.parent_id IN (?)) - (8)
+Feb 09 20:41:02 symfony [info] {Doctrine_Connection_Statement} execute : SELECT m.id AS m__id, m.name AS m__name, m.title AS m__title, m.description AS m__description, m.picture AS m__picture, m.parent_id AS m__parent_id FROM menu_item m WHERE (m.parent_id IN (?)) - (13)
+Feb 09 20:41:02 symfony [info] {Doctrine_Connection_Statement} execute : SELECT m.id AS m__id, m.name AS m__name, m.title AS m__title, m.description AS m__description, m.picture AS m__picture, m.parent_id AS m__parent_id FROM menu_item m WHERE (m.parent_id IN (?)) - (9)
+Feb 09 20:41:02 symfony [info] {Doctrine_Connection_Statement} execute : SELECT m.id AS m__id, m.name AS m__name, m.title AS m__title, m.description AS m__description, m.picture AS m__picture, m.parent_id AS m__parent_id FROM menu_item m WHERE (m.parent_id IN (?)) - (14)
+Feb 09 20:41:02 symfony [info] {Doctrine_Connection_Statement} execute : SELECT m.id AS m__id, m.name AS m__name, m.title AS m__title, m.description AS m__description, m.picture AS m__picture, m.parent_id AS m__parent_id FROM menu_item m WHERE (m.parent_id IN (?)) - (10)
+Feb 09 20:41:02 symfony [info] {Doctrine_Connection_Statement} execute : SELECT m.id AS m__id, m.name AS m__name, m.title AS m__title, m.description AS m__description, m.picture AS m__picture, m.parent_id AS m__parent_id FROM menu_item m WHERE (m.parent_id IN (?)) - (15)
