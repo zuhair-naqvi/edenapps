@@ -90,5 +90,20 @@ EOD;
 	  is_array($v) ? $this->arrayToXml($v, $xml->addChild($k)) : $xml->addChild($k, $v);
 	}
     return $xml;
-  }  
+  }
+
+ public function executeBooking(sfWebRequest $request)
+ {
+ 	$memberId= $request->getParameter('mid');
+	$member = Doctrine_Query::create()
+		  ->from('Members m')
+		  ->where('m.id = ?', $memberId)
+		  ->execute()
+		  ->getFirst();
+
+	echo $member->name;
+
+	exit;
+ } 
+  
 }

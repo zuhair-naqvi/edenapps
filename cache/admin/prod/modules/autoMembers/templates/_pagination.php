@@ -1,25 +1,58 @@
-<div class="sf_admin_pagination">
-  <a href="<?php echo url_for('@members') ?>?page=1">
-    <?php echo image_tag(sfConfig::get('sf_admin_module_web_dir').'/images/first.png', array('alt' => __('First page', array(), 'sf_admin'), 'title' => __('First page', array(), 'sf_admin'))) ?>
-  </a>
+<?php
+$first = ($pager->getPage() * $pager->getMaxPerPage() - $pager->getMaxPerPage() + 1);
+$last = $first + $pager->getMaxPerPage() - 1;
+?>
 
-  <a href="<?php echo url_for('@members') ?>?page=<?php echo $pager->getPreviousPage() ?>">
-    <?php echo image_tag(sfConfig::get('sf_admin_module_web_dir').'/images/previous.png', array('alt' => __('Previous page', array(), 'sf_admin'), 'title' => __('Previous page', array(), 'sf_admin'))) ?>
-  </a>
+<table id="sf_admin_pager">
+  <tbody>
+    <tr>
+      <td class="left"></td>
+      <td class="center">
+        <table align="center" class="sf_admin_pagination">
+          <tbody>
+            <tr>
+              <?php if ($pager->haveToPaginate()): ?>
+              <td class="button">
+                <a href="<?php echo url_for('@members?page=1') ?>"<?php if ($pager->getPage() == 1) echo ' class="ui-state-disabled"' ?>>
+                  <span class="ui-icon ui-icon-seek-first"></span>                </a>
+              </td>
 
-  <?php foreach ($pager->getLinks() as $page): ?>
-    <?php if ($page == $pager->getPage()): ?>
-      <?php echo $page ?>
-    <?php else: ?>
-      <a href="<?php echo url_for('@members') ?>?page=<?php echo $page ?>"><?php echo $page ?></a>
-    <?php endif; ?>
-  <?php endforeach; ?>
+              <td class="button">
+                <a href="<?php echo url_for('@members?page='.$pager->getPreviousPage()) ?>"<?php if ($pager->getPage() == 1) echo ' class="ui-state-disabled"' ?>>
+                  <span class="ui-icon ui-icon-seek-prev"></span>                </a>
+              </td>
 
-  <a href="<?php echo url_for('@members') ?>?page=<?php echo $pager->getNextPage() ?>">
-    <?php echo image_tag(sfConfig::get('sf_admin_module_web_dir').'/images/next.png', array('alt' => __('Next page', array(), 'sf_admin'), 'title' => __('Next page', array(), 'sf_admin'))) ?>
-  </a>
+              <td align="center">
+                <?php echo __('Page') ?>
+                <input type="text" name="page" value="<?php echo $pager->getPage() ?>" maxlength="7" size="2" />
+                <?php echo __('of %1%', array('%1%' => $pager->getLastPage())) ?>
+            	</td>
 
-  <a href="<?php echo url_for('@members') ?>?page=<?php echo $pager->getLastPage() ?>">
-    <?php echo image_tag(sfConfig::get('sf_admin_module_web_dir').'/images/last.png', array('alt' => __('Last page', array(), 'sf_admin'), 'title' => __('Last page', array(), 'sf_admin'))) ?>
-  </a>
-</div>
+              <td class="button">
+                <a href="<?php echo url_for('@members?page='.$pager->getNextPage()) ?>"<?php if ($pager->getPage() == $pager->getLastPage()) echo ' class="ui-state-disabled"' ?>>
+                  <span class="ui-icon ui-icon-seek-next"></span>                </a>
+              </td>
+
+              <td class="button">
+                <a href="<?php echo url_for('@members?page='.$pager->getLastPage()) ?>"<?php if ($pager->getPage() == $pager->getLastPage()) echo ' class="ui-state-disabled"' ?>>
+                  <span class="ui-icon ui-icon-seek-end"></span>                </a>
+              </td>
+              <?php endif; ?>
+            </tr>
+          </tbody>
+        </table>
+      </td>
+      <td class="right">
+        <?php
+      	echo __('View %1% - %2% of %3%',
+          array(
+            '%1%' => $first,
+            '%2%' => ($last > $pager->getNbResults()) ? $pager->getNbResults() : $last,
+            '%3%' => $pager->getNbResults()
+          )
+      	)
+      	?>
+      </td>
+    </tr>
+  </tbody>
+</table>

@@ -9,9 +9,9 @@ require_once(dirname(__FILE__).'/../lib/BaseMembersGeneratorHelper.class.php');
  * @package    ##PROJECT_NAME##
  * @subpackage members
  * @author     ##AUTHOR_NAME##
- * @version    SVN: $Id: actions.class.php 24171 2009-11-19 16:37:50Z Kris.Wallsmith $
+ * @version    SVN: $Id: actions.class.php 12493 2008-10-31 14:43:26Z fabien $
  */
-abstract class autoMembersActions extends sfActions
+class autoMembersActions extends sfActions
 {
   public function preExecute()
   {
@@ -30,7 +30,7 @@ abstract class autoMembersActions extends sfActions
   public function executeIndex(sfWebRequest $request)
   {
     // sorting
-    if ($request->getParameter('sort') && $this->isValidSortColumn($request->getParameter('sort')))
+    if ($request->getParameter('sort'))
     {
       $this->setSort(array($request->getParameter('sort'), $request->getParameter('sort_type')));
     }
@@ -43,6 +43,9 @@ abstract class autoMembersActions extends sfActions
 
     $this->pager = $this->getPager();
     $this->sort = $this->getSort();
+
+    // has filters? (usefull for activate reset button)
+    $this->hasFilters = $this->getUser()->getAttribute('members.filters', $this->configuration->getFilterDefaults(), 'admin_module');
   }
 
   public function executeFilter(sfWebRequest $request)
@@ -110,10 +113,9 @@ abstract class autoMembersActions extends sfActions
 
     $this->dispatcher->notify(new sfEvent($this, 'admin.delete_object', array('object' => $this->getRoute()->getObject())));
 
-    if ($this->getRoute()->getObject()->delete())
-    {
-      $this->getUser()->setFlash('notice', 'The item was deleted successfully.');
-    }
+    $this->getRoute()->getObject()->delete();
+
+    $this->getUser()->setFlash('notice', 'The item was deleted successfully.');
 
     $this->redirect('@members');
   }
@@ -146,7 +148,7 @@ abstract class autoMembersActions extends sfActions
       $this->forward(sfConfig::get('sf_secure_module'), sfConfig::get('sf_secure_action'));
     }
 
-    $validator = new sfValidatorDoctrineChoice(array('multiple' => true, 'model' => 'Members'));
+    $validator = new sfValidatorDoctrineChoice(array('model' => 'Members'));
     try
     {
       // validate ids
@@ -167,17 +169,21 @@ abstract class autoMembersActions extends sfActions
   {
     $ids = $request->getParameter('ids');
 
-    $records = Doctrine_Query::create()
+    $count = Doctrine_Query::create()
+      ->delete()
       ->from('Members')
       ->whereIn('id', $ids)
       ->execute();
 
-    foreach ($records as $record)
+    if ($count >= count($ids))
     {
-      $record->delete();
+      $this->getUser()->setFlash('notice', 'The selected items have been deleted successfully.');
+    }
+    else
+    {
+      $this->getUser()->setFlash('error', 'A problem occurs when deleting the selected items.');
     }
 
-    $this->getUser()->setFlash('notice', 'The selected items have been deleted successfully.');
     $this->redirect('@members');
   }
 
@@ -188,21 +194,7 @@ abstract class autoMembersActions extends sfActions
     {
       $notice = $form->getObject()->isNew() ? 'The item was created successfully.' : 'The item was updated successfully.';
 
-      try {
-        $members = $form->save();
-      } catch (Doctrine_Validator_Exception $e) {
-
-        $errorStack = $form->getObject()->getErrorStack();
-
-        $message = get_class($form->getObject()) . ' has ' . count($errorStack) . " field" . (count($errorStack) > 1 ?  's' : null) . " with validation errors: ";
-        foreach ($errorStack as $field => $errors) {
-            $message .= "$field (" . implode(", ", $errors) . "), ";
-        }
-        $message = trim($message, ', ');
-
-        $this->getUser()->setFlash('error', $message);
-        return sfView::SUCCESS;
-      }
+      $members = $form->save();
 
       $this->dispatcher->notify(new sfEvent($this, 'admin.save_object', array('object' => $members)));
 
@@ -258,7 +250,7 @@ abstract class autoMembersActions extends sfActions
   protected function buildQuery()
   {
     $tableMethod = $this->configuration->getTableMethod();
-    if (null === $this->filters)
+    if (is_null($this->filters))
     {
       $this->filters = $this->configuration->getFilterForm($this->getFilters());
     }
@@ -282,17 +274,12 @@ abstract class autoMembersActions extends sfActions
       return;
     }
 
-    if (!in_array(strtolower($sort[1]), array('asc', 'desc')))
-    {
-      $sort[1] = 'asc';
-    }
-
     $query->addOrderBy($sort[0] . ' ' . $sort[1]);
   }
 
   protected function getSort()
   {
-    if (null !== $sort = $this->getUser()->getAttribute('members.sort', null, 'admin_module'))
+    if (!is_null($sort = $this->getUser()->getAttribute('members.sort', null, 'admin_module')))
     {
       return $sort;
     }
@@ -304,7 +291,7 @@ abstract class autoMembersActions extends sfActions
 
   protected function setSort(array $sort)
   {
-    if (null !== $sort[0] && null === $sort[1])
+    if (!is_null($sort[0]) && is_null($sort[1]))
     {
       $sort[1] = 'asc';
     }
@@ -312,8 +299,12 @@ abstract class autoMembersActions extends sfActions
     $this->getUser()->setAttribute('members.sort', $sort, 'admin_module');
   }
 
-  protected function isValidSortColumn($column)
-  {
-    return Doctrine_Core::getTable('Members')->hasColumn($column);
-  }
+	public function executeShow(sfWebRequest $request)
+	{
+	  $this->members = Doctrine::getTable('Members')->find($request->getParameter('id'));
+	  $this->forward404Unless($this->members);
+	  $this->form = $this->configuration->getForm($this->members);
+	}
+
+
 }

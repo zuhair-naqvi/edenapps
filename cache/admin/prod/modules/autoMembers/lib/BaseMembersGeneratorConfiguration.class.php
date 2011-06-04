@@ -6,10 +6,20 @@
  * @package    ##PROJECT_NAME##
  * @subpackage members
  * @author     ##AUTHOR_NAME##
- * @version    SVN: $Id: configuration.php 24171 2009-11-19 16:37:50Z Kris.Wallsmith $
+ * @version    SVN: $Id: configuration.php 12474 2008-10-31 10:41:27Z fabien $
  */
-abstract class BaseMembersGeneratorConfiguration extends sfModelGeneratorConfiguration
+class BaseMembersGeneratorConfiguration extends sfModelGeneratorConfiguration
 {
+  public function getCredentials($action)
+  {
+    if (0 === strpos($action, '_'))
+    {
+      $action = substr($action, 1);
+    }
+
+    return isset($this->configuration['credentials'][$action]) ? $this->configuration['credentials'][$action] : array();
+  }
+
   public function getActionsDefault()
   {
     return array();
@@ -27,11 +37,17 @@ abstract class BaseMembersGeneratorConfiguration extends sfModelGeneratorConfigu
 
   public function getEditActions()
   {
+		//  added show view
+	  // return array(  '_delete' => NULL,  '_list' => NULL,  '_show' => NULL,  '_save' => NULL,  '_save_and_add' => NULL,);
+  
     return array();
   }
 
   public function getListObjectActions()
   {
+		// =============== Added show view
+	  return array(  '_show' => NULL,  '_edit' => NULL,  '_delete' => NULL,);
+  
     return array(  '_edit' => NULL,  '_delete' => NULL,);
   }
 
@@ -47,7 +63,7 @@ abstract class BaseMembersGeneratorConfiguration extends sfModelGeneratorConfigu
 
   public function getListParams()
   {
-    return '%%id%% - %%name%% - %%level%% - %%email%% - %%created_at%% - %%updated_at%%';
+    return '%%id%% - %%name%% - %%level%% - %%email%% - %%last_login%% - %%created_at%% - %%updated_at%%';
   }
 
   public function getListLayout()
@@ -92,7 +108,7 @@ abstract class BaseMembersGeneratorConfiguration extends sfModelGeneratorConfigu
 
   public function getListDisplay()
   {
-    return array(  0 => 'id',  1 => 'name',  2 => 'level',  3 => 'email',  4 => 'created_at',  5 => 'updated_at',);
+    return array(  0 => 'id',  1 => 'name',  2 => 'level',  3 => 'email',  4 => 'last_login',  5 => 'created_at',  6 => 'updated_at',);
   }
 
   public function getFieldsDefault()
@@ -102,6 +118,7 @@ abstract class BaseMembersGeneratorConfiguration extends sfModelGeneratorConfigu
       'name' => array(  'is_link' => false,  'is_real' => true,  'is_partial' => false,  'is_component' => false,  'type' => 'Text',),
       'level' => array(  'is_link' => false,  'is_real' => true,  'is_partial' => false,  'is_component' => false,  'type' => 'Enum',),
       'email' => array(  'is_link' => false,  'is_real' => true,  'is_partial' => false,  'is_component' => false,  'type' => 'Text',),
+      'last_login' => array(  'is_link' => false,  'is_real' => true,  'is_partial' => false,  'is_component' => false,  'type' => 'Date',),
       'created_at' => array(  'is_link' => false,  'is_real' => true,  'is_partial' => false,  'is_component' => false,  'type' => 'Date',),
       'updated_at' => array(  'is_link' => false,  'is_real' => true,  'is_partial' => false,  'is_component' => false,  'type' => 'Date',),
     );
@@ -114,6 +131,7 @@ abstract class BaseMembersGeneratorConfiguration extends sfModelGeneratorConfigu
       'name' => array(),
       'level' => array(),
       'email' => array(),
+      'last_login' => array(),
       'created_at' => array(),
       'updated_at' => array(),
     );
@@ -126,6 +144,7 @@ abstract class BaseMembersGeneratorConfiguration extends sfModelGeneratorConfigu
       'name' => array(),
       'level' => array(),
       'email' => array(),
+      'last_login' => array(),
       'created_at' => array(),
       'updated_at' => array(),
     );
@@ -138,6 +157,7 @@ abstract class BaseMembersGeneratorConfiguration extends sfModelGeneratorConfigu
       'name' => array(),
       'level' => array(),
       'email' => array(),
+      'last_login' => array(),
       'created_at' => array(),
       'updated_at' => array(),
     );
@@ -150,6 +170,20 @@ abstract class BaseMembersGeneratorConfiguration extends sfModelGeneratorConfigu
       'name' => array(),
       'level' => array(),
       'email' => array(),
+      'last_login' => array(),
+      'created_at' => array(),
+      'updated_at' => array(),
+    );
+  }
+
+  public function getFieldsShow()
+  {
+    return array(
+      'id' => array(),
+      'name' => array(),
+      'level' => array(),
+      'email' => array(),
+      'last_login' => array(),
       'created_at' => array(),
       'updated_at' => array(),
     );
@@ -162,6 +196,7 @@ abstract class BaseMembersGeneratorConfiguration extends sfModelGeneratorConfigu
       'name' => array(),
       'level' => array(),
       'email' => array(),
+      'last_login' => array(),
       'created_at' => array(),
       'updated_at' => array(),
     );
@@ -178,6 +213,11 @@ abstract class BaseMembersGeneratorConfiguration extends sfModelGeneratorConfigu
     return 'MembersForm';
   }
 
+  public function getFormOptions()
+  {
+    return array();
+  }
+
   public function hasFilterForm()
   {
     return true;
@@ -191,6 +231,77 @@ abstract class BaseMembersGeneratorConfiguration extends sfModelGeneratorConfigu
   public function getFilterFormClass()
   {
     return 'MembersFormFilter';
+  }
+
+	  protected function getConfig()
+  {
+    $configuration = parent::getConfig();
+    $configuration['show'] = $this->getFieldsShow();
+    return $configuration;
+  }
+
+  protected function compile()
+  {
+    parent::compile();
+    
+    $config = $this->getConfig();
+    
+    // add configuration for the show view 
+    $this->configuration['show'] = array( 'fields'         => array(),
+                                          'title'          => $this->getShowTitle(),
+                                          'actions'        => $this->getShowActions(),
+                                          'display'        => $this->getShowDisplay(),
+                                        ) ;
+
+    foreach (array('show') as $context)
+    {
+      foreach ($this->configuration[$context]['actions'] as $action => $parameters)
+      {
+        $this->configuration[$context]['actions'][$action] = $this->fixActionParameters($action, $parameters);
+      }
+    }
+
+
+  }
+
+  public function getShowActions()
+  {
+    return array(  '_list' => NULL,  '_edit' => NULL, '_delete' => NULL);
+  }
+
+  
+  public function getShowTitle()
+  {
+    return 'View Members';
+  }
+
+  public function getShowDisplay()
+  {
+      return array(  0 => 'id',  1 => 'name',  2 => 'level',  3 => 'email',  4 => 'last_login',  5 => 'created_at',  6 => 'updated_at',);
+  }
+
+  public function getFilterForm($filters)
+  {
+    $class = $this->getFilterFormClass();
+
+    return new $class($filters, $this->getFilterFormOptions());
+  }
+
+  public function getFilterFormOptions()
+  {
+    return array();
+  }
+
+  public function getFilterDefaults()
+  {
+    return array();
+  }
+
+  public function getPager($model)
+  {
+    $class = $this->getPagerClass();
+
+    return new $class($model, $this->getPagerMaxPerPage());
   }
 
   public function getPagerClass()
@@ -216,5 +327,10 @@ abstract class BaseMembersGeneratorConfiguration extends sfModelGeneratorConfigu
   public function getTableCountMethod()
   {
     return '';
+  }
+
+  public function getConnection()
+  {
+    return null;
   }
 }
