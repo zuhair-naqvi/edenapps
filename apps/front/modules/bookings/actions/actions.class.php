@@ -24,7 +24,7 @@ class bookingsActions extends sfActions
 //        $c = count($eventData);
         $name = $_REQUEST['name'];
         $email = $_REQUEST['email'];
-        $time = $_REQUEST['date'];
+        $time = $_REQUEST['time'];
         $guests = $$_REQUEST['guests'];
         
 
