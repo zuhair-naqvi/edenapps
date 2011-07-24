@@ -25,7 +25,7 @@ class bookingsActions extends sfActions
         'hi.zuhair@gmail.com',
         'New Booking',
       <<<EOF
-$eventData
+Test Mail
 EOF
     );
  
