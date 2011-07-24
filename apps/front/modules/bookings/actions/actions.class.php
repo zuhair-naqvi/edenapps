@@ -19,12 +19,13 @@ class bookingsActions extends sfActions
   {
     if($request->isMethod('post'))
     {
-        $eventData = json_decode($_REQUEST['eventstr']);
-        $c = count($eventData);
-        $name = $eventData['fbuser']['name'];
-        $email = $eventData['fbuser']['email'];
-        $time = $eventData['date'];
-        $guests = $eventData['guests'];
+//        $eventStr = $_REQUEST['eventstr'];
+//        $eventData = json_decode($eventStr);
+//        $c = count($eventData);
+        $name = $_REQUEST['name'];
+        $email = $_REQUEST['email'];
+        $time = $_REQUEST['date'];
+        $guests = $$_REQUEST['guests'];
         
 
         $message = $this->getMailer()->compose(
