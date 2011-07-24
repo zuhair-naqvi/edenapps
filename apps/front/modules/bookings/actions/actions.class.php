@@ -23,6 +23,7 @@ class bookingsActions extends sfActions
 //        $eventData = json_decode($eventStr);
 //        $c = count($eventData);
         $name = $_REQUEST['name'];
+        $name = $_REQUEST['phone'];
         $email = $_REQUEST['email'];
         $time = $_REQUEST['time'];
         $guests = $$_REQUEST['guests'];
