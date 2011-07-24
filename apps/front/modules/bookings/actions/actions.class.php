@@ -23,10 +23,10 @@ class bookingsActions extends sfActions
 //        $eventData = json_decode($eventStr);
 //        $c = count($eventData);
         $name = $_REQUEST['name'];
-        $name = $_REQUEST['phone'];
+        $phone = $_REQUEST['phone'];
         $email = $_REQUEST['email'];
         $time = $_REQUEST['time'];
-        $guests = $$_REQUEST['guests'];
+        $guests = $_REQUEST['guests'];
         
 
         $message = $this->getMailer()->compose(
@@ -34,7 +34,7 @@ class bookingsActions extends sfActions
         'hi.zuhair@gmail.com',
         'New Booking',
       <<<EOF
-From: $name <$email>
+From: $name <$email> - PH: $phone
 For: $guests guests
 At: $time
 EOF
