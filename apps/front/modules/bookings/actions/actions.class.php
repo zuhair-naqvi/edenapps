@@ -20,7 +20,16 @@ class bookingsActions extends sfActions
     if($request->isMethod('post'))
     {
         $eventData = $request->getParameter('eventdata');
-        mail('hi.zuhair@gmail.com', 'New Booking', $eventData);
+        $message = $this->getMailer()->compose(
+        array('webmaster@thecarltonapp.com' => 'The Carlton App'),
+        'hi.zuhair@gmail.com',
+        'New Booking',
+      <<<EOF
+$eventData
+EOF
+    );
+ 
+    $this->getMailer()->send($message);
     }
   }
 }
