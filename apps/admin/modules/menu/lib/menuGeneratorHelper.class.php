@@ -10,4 +10,11 @@
  */
 class menuGeneratorHelper extends BaseMenuGeneratorHelper
 {
+  public function linkToImport($params)
+  {
+    if (!key_exists('ui-icon', $params)) $params['ui-icon'] = '';
+    $params['params'] = UIHelper::addClasses($params, '');
+    $params['ui-icon'] = $this->getIcon('new', $params);
+    return '<li class="sf_admin_action_new">'.link_to(UIHelper::addIcon($params) . __($params['label'] , array(), 'sf_admin'), '@'.$this->getUrlForAction('import'), $params['params']).'</li>';
+  }
 }

@@ -2,6 +2,13 @@ all:
   doctrine:
     class: sfDoctrineDatabase
     param:
-      dsn: 'mysql:host=localhost;dbname=edenapps'
+      dsn: 'mysql:host=127.0.0.1;dbname=edenapps'
       username: root
-      password: zohair/naqvi/symfony/mysql
+      password: 
+#prod:
+#  doctrine:
+#    class: sfDoctrineDatabase
+#    param:
+#      dsn: 'mysql:host=localhost;dbname=edenapps'
+#      username: root
+#      password: zohair/naqvi/symfony/mysql

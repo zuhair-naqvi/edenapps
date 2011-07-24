@@ -27,7 +27,7 @@ all:
     enabled_modules: [default, sfGuardAuth, sfGuardGroup, sfGuardUser, sfGuardPermission]
       
     # Form security secret (CSRF protection)
-    csrf_secret:            a24fb7e8067a79ad75488ae1c939f6f037c1fe7e
+    csrf_secret:            false
 
     # Output escaping settings
     escaping_strategy:      true

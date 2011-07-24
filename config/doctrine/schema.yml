@@ -1,5 +1,7 @@
 MenuItem:
   columns:
+    pseudo_id: {type: integer}
+    pseudo_parent_id: {type: integer}
     name: {type: string(255)}
     title: {type: string(255)}
     description: {type: clob}
@@ -11,6 +13,7 @@ MenuItem:
       local: parent_id
       foreign: id
       foreignAlias: Children
+      onDelete: CASCADE
 Box:
   columns:
     title: {type: string(255)}
@@ -40,3 +43,7 @@ Roster:
     sunday: {type: string(255)}
   relations:
     Member: {class: Members, local: member_id, foreign: id, type: one, foreignType: many, foreignAlias: Rosters}
+Imports:
+  actAs: [Timestampable]
+  columns:
+    datafile: {type: string(255)}

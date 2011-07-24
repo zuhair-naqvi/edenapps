@@ -1,0 +1,3 @@
+id,name,title,description,picture,parent_id
+1,Food,Food and Drinks,NULL,NULL,NULL
+2,Specials,Weekly Specials,NULL,NULL,1

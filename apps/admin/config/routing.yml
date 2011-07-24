@@ -43,6 +43,10 @@ menu_item:
     column:               id
     with_wildcard_routes: true
 
+menu_item_import:
+  url: /menu/import
+  param: { module: menu, action: import }
+
 # You can find more information about this file on the symfony website:
 # http://www.symfony-project.org/reference/1_4/en/10-Routing
 

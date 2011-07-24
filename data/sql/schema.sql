@@ -1,6 +1,7 @@
 CREATE TABLE box (id BIGINT AUTO_INCREMENT, title VARCHAR(255), description LONGTEXT, picture VARCHAR(255), PRIMARY KEY(id)) ENGINE = INNODB;
+CREATE TABLE imports (id BIGINT AUTO_INCREMENT, datafile VARCHAR(255), created_at DATETIME NOT NULL, updated_at DATETIME NOT NULL, PRIMARY KEY(id)) ENGINE = INNODB;
 CREATE TABLE members (id BIGINT AUTO_INCREMENT, name VARCHAR(255), level VARCHAR(255) DEFAULT 'Bronze', email VARCHAR(255) UNIQUE, last_login DATETIME, created_at DATETIME NOT NULL, updated_at DATETIME NOT NULL, PRIMARY KEY(id)) ENGINE = INNODB;
-CREATE TABLE menu_item (id BIGINT AUTO_INCREMENT, name VARCHAR(255), title VARCHAR(255), description LONGTEXT, picture VARCHAR(255), parent_id BIGINT, INDEX parent_id_idx (parent_id), PRIMARY KEY(id)) ENGINE = INNODB;
+CREATE TABLE menu_item (id BIGINT AUTO_INCREMENT, pseudo_id BIGINT, pseudo_parent_id BIGINT, name VARCHAR(255), title VARCHAR(255), description LONGTEXT, picture VARCHAR(255), parent_id BIGINT, INDEX parent_id_idx (parent_id), PRIMARY KEY(id)) ENGINE = INNODB;
 CREATE TABLE roster (id BIGINT AUTO_INCREMENT, member_id BIGINT, monday VARCHAR(255), tuesday VARCHAR(255), wednesday VARCHAR(255), thursday VARCHAR(255), friday VARCHAR(255), saturday VARCHAR(255), sunday VARCHAR(255), created_at DATETIME NOT NULL, updated_at DATETIME NOT NULL, INDEX member_id_idx (member_id), PRIMARY KEY(id)) ENGINE = INNODB;
 CREATE TABLE shits_me_list (id BIGINT AUTO_INCREMENT, title VARCHAR(255), description VARCHAR(255), PRIMARY KEY(id)) ENGINE = INNODB;
 CREATE TABLE sf_guard_forgot_password (id BIGINT AUTO_INCREMENT, user_id BIGINT NOT NULL, unique_key VARCHAR(255), expires_at DATETIME NOT NULL, created_at DATETIME NOT NULL, updated_at DATETIME NOT NULL, INDEX user_id_idx (user_id), PRIMARY KEY(id)) ENGINE = INNODB;
@@ -11,7 +12,7 @@ CREATE TABLE sf_guard_remember_key (id BIGINT AUTO_INCREMENT, user_id BIGINT, re
 CREATE TABLE sf_guard_user (id BIGINT AUTO_INCREMENT, first_name VARCHAR(255), last_name VARCHAR(255), email_address VARCHAR(255) NOT NULL UNIQUE, username VARCHAR(128) NOT NULL UNIQUE, algorithm VARCHAR(128) DEFAULT 'sha1' NOT NULL, salt VARCHAR(128), password VARCHAR(128), is_active TINYINT(1) DEFAULT '1', is_super_admin TINYINT(1) DEFAULT '0', last_login DATETIME, created_at DATETIME NOT NULL, updated_at DATETIME NOT NULL, INDEX is_active_idx_idx (is_active), PRIMARY KEY(id)) ENGINE = INNODB;
 CREATE TABLE sf_guard_user_group (user_id BIGINT, group_id BIGINT, created_at DATETIME NOT NULL, updated_at DATETIME NOT NULL, PRIMARY KEY(user_id, group_id)) ENGINE = INNODB;
 CREATE TABLE sf_guard_user_permission (user_id BIGINT, permission_id BIGINT, created_at DATETIME NOT NULL, updated_at DATETIME NOT NULL, PRIMARY KEY(user_id, permission_id)) ENGINE = INNODB;
-ALTER TABLE menu_item ADD CONSTRAINT menu_item_parent_id_menu_item_id FOREIGN KEY (parent_id) REFERENCES menu_item(id);
+ALTER TABLE menu_item ADD CONSTRAINT menu_item_parent_id_menu_item_id FOREIGN KEY (parent_id) REFERENCES menu_item(id) ON DELETE CASCADE;
 ALTER TABLE roster ADD CONSTRAINT roster_member_id_members_id FOREIGN KEY (member_id) REFERENCES members(id);
 ALTER TABLE sf_guard_forgot_password ADD CONSTRAINT sf_guard_forgot_password_user_id_sf_guard_user_id FOREIGN KEY (user_id) REFERENCES sf_guard_user(id) ON DELETE CASCADE;
 ALTER TABLE sf_guard_group_permission ADD CONSTRAINT sf_guard_group_permission_permission_id_sf_guard_permission_id FOREIGN KEY (permission_id) REFERENCES sf_guard_permission(id) ON DELETE CASCADE;

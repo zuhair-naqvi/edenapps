@@ -15,21 +15,25 @@ abstract class BaseMenuItemForm extends BaseFormDoctrine
   public function setup()
   {
     $this->setWidgets(array(
-      'id'          => new sfWidgetFormInputHidden(),
-      'name'        => new sfWidgetFormInputText(),
-      'title'       => new sfWidgetFormInputText(),
-      'description' => new sfWidgetFormTextarea(),
-      'picture'     => new sfWidgetFormInputText(),
-      'parent_id'   => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('Parent'), 'add_empty' => true)),
+      'id'               => new sfWidgetFormInputHidden(),
+      'pseudo_id'        => new sfWidgetFormInputText(),
+      'pseudo_parent_id' => new sfWidgetFormInputText(),
+      'name'             => new sfWidgetFormInputText(),
+      'title'            => new sfWidgetFormInputText(),
+      'description'      => new sfWidgetFormTextarea(),
+      'picture'          => new sfWidgetFormInputText(),
+      'parent_id'        => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('Parent'), 'add_empty' => true)),
     ));
 
     $this->setValidators(array(
-      'id'          => new sfValidatorChoice(array('choices' => array($this->getObject()->get('id')), 'empty_value' => $this->getObject()->get('id'), 'required' => false)),
-      'name'        => new sfValidatorString(array('max_length' => 255, 'required' => false)),
-      'title'       => new sfValidatorString(array('max_length' => 255, 'required' => false)),
-      'description' => new sfValidatorString(array('required' => false)),
-      'picture'     => new sfValidatorString(array('max_length' => 255, 'required' => false)),
-      'parent_id'   => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('Parent'), 'required' => false)),
+      'id'               => new sfValidatorChoice(array('choices' => array($this->getObject()->get('id')), 'empty_value' => $this->getObject()->get('id'), 'required' => false)),
+      'pseudo_id'        => new sfValidatorInteger(array('required' => false)),
+      'pseudo_parent_id' => new sfValidatorInteger(array('required' => false)),
+      'name'             => new sfValidatorString(array('max_length' => 255, 'required' => false)),
+      'title'            => new sfValidatorString(array('max_length' => 255, 'required' => false)),
+      'description'      => new sfValidatorString(array('required' => false)),
+      'picture'          => new sfValidatorString(array('max_length' => 255, 'required' => false)),
+      'parent_id'        => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('Parent'), 'required' => false)),
     ));
 
     $this->widgetSchema->setNameFormat('menu_item[%s]');
