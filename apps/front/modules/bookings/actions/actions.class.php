@@ -20,12 +20,16 @@ class bookingsActions extends sfActions
     if($request->isMethod('post'))
     {
         $eventData = $request->getParameter('eventdata');
+        $req = json_encode($_POST);
         $message = $this->getMailer()->compose(
         array('webmaster@thecarltonapp.com' => 'The Carlton App'),
         'hi.zuhair@gmail.com',
         'New Booking',
       <<<EOF
 Test Mail
+    
+$req
+    
 EOF
     );
  
