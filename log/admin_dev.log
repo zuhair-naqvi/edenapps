@@ -11572,3 +11572,283 @@ Feb 17 09:09:17 symfony [info] {sfWebDebugLogger} Action "sfGuardAuth/signin" 6.
 Feb 17 09:09:17 symfony [info] {sfWebDebugLogger} View "Success" for "sfGuardAuth/signin" 151.04 ms (1)
 Feb 17 09:09:17 symfony [info] {sfWebDebugLogger} Partial "sfGuardAuth/_signin_form" 3.28 ms (1)
 Feb 17 09:09:17 symfony [info] {sfWebResponse} Send content (49199 o)
+Jul 23 06:57:27 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/guard/login)
+Jul 23 06:57:27 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/guard/logout)
+Jul 23 06:57:27 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user_filter" (/guard/users/filter.:sf_format)
+Jul 23 06:57:27 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user_batch" (/guard/users/batch.:sf_format)
+Jul 23 06:57:27 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user" (/guard/users.:sf_format)
+Jul 23 06:57:27 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user_new" (/guard/users/new.:sf_format)
+Jul 23 06:57:27 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user_create" (/guard/users.:sf_format)
+Jul 23 06:57:27 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user_edit" (/guard/users/:id/edit.:sf_format)
+Jul 23 06:57:27 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user_update" (/guard/users/:id.:sf_format)
+Jul 23 06:57:27 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user_delete" (/guard/users/:id.:sf_format)
+Jul 23 06:57:27 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user_show" (/guard/users/:id.:sf_format)
+Jul 23 06:57:27 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user_object" (/guard/users/:id/:action.:sf_format)
+Jul 23 06:57:27 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user_collection" (/guard/users/:action/action.:sf_format)
+Jul 23 06:57:27 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_group_filter" (/guard/groups/filter.:sf_format)
+Jul 23 06:57:27 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_group_batch" (/guard/groups/batch.:sf_format)
+Jul 23 06:57:27 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_group" (/guard/groups.:sf_format)
+Jul 23 06:57:28 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_group_new" (/guard/groups/new.:sf_format)
+Jul 23 06:57:28 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_group_create" (/guard/groups.:sf_format)
+Jul 23 06:57:28 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_group_edit" (/guard/groups/:id/edit.:sf_format)
+Jul 23 06:57:28 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_group_update" (/guard/groups/:id.:sf_format)
+Jul 23 06:57:28 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_group_delete" (/guard/groups/:id.:sf_format)
+Jul 23 06:57:28 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_group_show" (/guard/groups/:id.:sf_format)
+Jul 23 06:57:28 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_group_object" (/guard/groups/:id/:action.:sf_format)
+Jul 23 06:57:28 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_group_collection" (/guard/groups/:action/action.:sf_format)
+Jul 23 06:57:28 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_permission_filter" (/guard/permissions/filter.:sf_format)
+Jul 23 06:57:28 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_permission_batch" (/guard/permissions/batch.:sf_format)
+Jul 23 06:57:28 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_permission" (/guard/permissions.:sf_format)
+Jul 23 06:57:28 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_permission_new" (/guard/permissions/new.:sf_format)
+Jul 23 06:57:28 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_permission_create" (/guard/permissions.:sf_format)
+Jul 23 06:57:28 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_permission_edit" (/guard/permissions/:id/edit.:sf_format)
+Jul 23 06:57:28 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_permission_update" (/guard/permissions/:id.:sf_format)
+Jul 23 06:57:28 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_permission_delete" (/guard/permissions/:id.:sf_format)
+Jul 23 06:57:28 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_permission_show" (/guard/permissions/:id.:sf_format)
+Jul 23 06:57:28 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_permission_object" (/guard/permissions/:id/:action.:sf_format)
+Jul 23 06:57:28 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_permission_collection" (/guard/permissions/:action/action.:sf_format)
+Jul 23 06:57:28 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'menu',  'action' => 'index',)
+Jul 23 06:57:29 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jul 23 06:57:29 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Jul 23 06:57:29 symfony [info] {sfBasicSecurityFilter} Action "menu/index" requires authentication, forwarding to "sfGuardAuth/signin"
+Jul 23 06:57:29 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jul 23 06:57:29 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jul 23 06:57:29 symfony [info] {sfGuardAuthActions} Call "sfGuardAuthActions->executeSignin()"
+Jul 23 06:57:29 symfony [info] {sfPHPView} Render "/var/www/symfony/apps/admin/modules/sfGuardAuth/templates/signinSuccess.php"
+Jul 23 06:57:29 symfony [info] {sfPartialView} Render "/var/www/symfony/apps/admin/modules/sfGuardAuth/templates/_signin_form.php"
+Jul 23 06:57:29 symfony [info] {sfPHPView} Decorate content with "/var/www/symfony/apps/admin/templates/layout.php"
+Jul 23 06:57:29 symfony [info] {sfPHPView} Render "/var/www/symfony/apps/admin/templates/layout.php"
+Jul 23 06:57:29 symfony [info] {sfWebResponse} Send status "HTTP/1.1 401 Unauthorized"
+Jul 23 06:57:29 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jul 23 06:57:29 symfony [info] {sfWebDebugLogger} Configuration 1691.40 ms (14)
+Jul 23 06:57:29 symfony [info] {sfWebDebugLogger} Factories 913.86 ms (1)
+Jul 23 06:57:29 symfony [info] {sfWebDebugLogger} Action "sfGuardAuth/signin" 66.58 ms (1)
+Jul 23 06:57:29 symfony [info] {sfWebDebugLogger} View "Success" for "sfGuardAuth/signin" 73.31 ms (1)
+Jul 23 06:57:29 symfony [info] {sfWebDebugLogger} Partial "sfGuardAuth/_signin_form" 3.31 ms (1)
+Jul 23 06:57:29 symfony [info] {sfWebResponse} Send content (48632 o)
+Jul 23 06:57:35 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/guard/login)
+Jul 23 06:57:35 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/guard/logout)
+Jul 23 06:57:35 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user_filter" (/guard/users/filter.:sf_format)
+Jul 23 06:57:35 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user_batch" (/guard/users/batch.:sf_format)
+Jul 23 06:57:35 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user" (/guard/users.:sf_format)
+Jul 23 06:57:35 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user_new" (/guard/users/new.:sf_format)
+Jul 23 06:57:35 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user_create" (/guard/users.:sf_format)
+Jul 23 06:57:35 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user_edit" (/guard/users/:id/edit.:sf_format)
+Jul 23 06:57:35 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user_update" (/guard/users/:id.:sf_format)
+Jul 23 06:57:35 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user_delete" (/guard/users/:id.:sf_format)
+Jul 23 06:57:35 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user_show" (/guard/users/:id.:sf_format)
+Jul 23 06:57:35 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user_object" (/guard/users/:id/:action.:sf_format)
+Jul 23 06:57:35 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user_collection" (/guard/users/:action/action.:sf_format)
+Jul 23 06:57:35 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_group_filter" (/guard/groups/filter.:sf_format)
+Jul 23 06:57:35 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_group_batch" (/guard/groups/batch.:sf_format)
+Jul 23 06:57:35 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_group" (/guard/groups.:sf_format)
+Jul 23 06:57:35 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_group_new" (/guard/groups/new.:sf_format)
+Jul 23 06:57:35 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_group_create" (/guard/groups.:sf_format)
+Jul 23 06:57:35 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_group_edit" (/guard/groups/:id/edit.:sf_format)
+Jul 23 06:57:35 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_group_update" (/guard/groups/:id.:sf_format)
+Jul 23 06:57:35 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_group_delete" (/guard/groups/:id.:sf_format)
+Jul 23 06:57:35 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_group_show" (/guard/groups/:id.:sf_format)
+Jul 23 06:57:35 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_group_object" (/guard/groups/:id/:action.:sf_format)
+Jul 23 06:57:35 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_group_collection" (/guard/groups/:action/action.:sf_format)
+Jul 23 06:57:35 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_permission_filter" (/guard/permissions/filter.:sf_format)
+Jul 23 06:57:35 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_permission_batch" (/guard/permissions/batch.:sf_format)
+Jul 23 06:57:35 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_permission" (/guard/permissions.:sf_format)
+Jul 23 06:57:35 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_permission_new" (/guard/permissions/new.:sf_format)
+Jul 23 06:57:35 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_permission_create" (/guard/permissions.:sf_format)
+Jul 23 06:57:35 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_permission_edit" (/guard/permissions/:id/edit.:sf_format)
+Jul 23 06:57:35 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_permission_update" (/guard/permissions/:id.:sf_format)
+Jul 23 06:57:35 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_permission_delete" (/guard/permissions/:id.:sf_format)
+Jul 23 06:57:35 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_permission_show" (/guard/permissions/:id.:sf_format)
+Jul 23 06:57:35 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_permission_object" (/guard/permissions/:id/:action.:sf_format)
+Jul 23 06:57:35 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_permission_collection" (/guard/permissions/:action/action.:sf_format)
+Jul 23 06:57:35 symfony [info] {sfPatternRouting} Match route "sf_guard_signin" (/login) for /login with parameters array (  'module' => 'sfGuardAuth',  'action' => 'signin',)
+Jul 23 06:57:35 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jul 23 06:57:35 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jul 23 06:57:35 symfony [info] {sfGuardAuthActions} Call "sfGuardAuthActions->executeSignin()"
+Jul 23 06:57:35 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Jul 23 06:57:35 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.first_name AS s__first_name, s.last_name AS s__last_name, s.email_address AS s__email_address, s.username AS s__username, s.algorithm AS s__algorithm, s.salt AS s__salt, s.password AS s__password, s.is_active AS s__is_active, s.is_super_admin AS s__is_super_admin, s.last_login AS s__last_login, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM sf_guard_user s WHERE (s.username = ? AND s.is_active = ?) - (james, 1)
+Jul 23 06:57:35 symfony [info] {myUser} User is authenticated
+Jul 23 06:57:35 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.name AS s__name, s.description AS s__description, s.created_at AS s__created_at, s.updated_at AS s__updated_at, s2.user_id AS s2__user_id, s2.permission_id AS s2__permission_id, s2.created_at AS s2__created_at, s2.updated_at AS s2__updated_at FROM sf_guard_permission s LEFT JOIN sf_guard_user_permission s2 ON s.id = s2.permission_id WHERE (s2.user_id IN (?)) - (1)
+Jul 23 06:57:36 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.name AS s__name, s.description AS s__description, s.created_at AS s__created_at, s.updated_at AS s__updated_at, s2.user_id AS s2__user_id, s2.group_id AS s2__group_id, s2.created_at AS s2__created_at, s2.updated_at AS s2__updated_at FROM sf_guard_group s LEFT JOIN sf_guard_user_group s2 ON s.id = s2.group_id WHERE (s2.user_id IN (?)) - (1)
+Jul 23 06:57:36 symfony [info] {myUser} Add credential(s) ""
+Jul 23 06:57:36 symfony [info] {Doctrine_Connection_Statement} execute : UPDATE sf_guard_user SET last_login = ?, updated_at = ? WHERE id = ? - (2011-07-23 06:57:36, 2011-07-23 06:57:36, 1)
+Jul 23 06:57:36 symfony [info] {sfFrontWebController} Redirect to "http://ec2-184-72-186-159.compute-1.amazonaws.com/admin_dev.php"
+Jul 23 06:57:36 symfony [info] {sfWebResponse} Send status "HTTP/1.1 302 Found"
+Jul 23 06:57:36 symfony [info] {sfWebResponse} Send header "Location: http://ec2-184-72-186-159.compute-1.amazonaws.com/admin_dev.php"
+Jul 23 06:57:36 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jul 23 06:57:36 symfony [info] {sfWebDebugLogger} Configuration 0.84 ms (8)
+Jul 23 06:57:36 symfony [info] {sfWebDebugLogger} Factories 345.98 ms (1)
+Jul 23 06:57:36 symfony [info] {sfWebDebugLogger} Action "sfGuardAuth/signin" 643.88 ms (1)
+Jul 23 06:57:36 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.02 ms (5)
+Jul 23 06:57:36 symfony [info] {sfWebResponse} Send content (134 o)
+Jul 23 06:57:36 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/guard/login)
+Jul 23 06:57:36 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/guard/logout)
+Jul 23 06:57:36 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user_filter" (/guard/users/filter.:sf_format)
+Jul 23 06:57:36 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user_batch" (/guard/users/batch.:sf_format)
+Jul 23 06:57:36 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user" (/guard/users.:sf_format)
+Jul 23 06:57:36 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user_new" (/guard/users/new.:sf_format)
+Jul 23 06:57:36 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user_create" (/guard/users.:sf_format)
+Jul 23 06:57:36 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user_edit" (/guard/users/:id/edit.:sf_format)
+Jul 23 06:57:36 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user_update" (/guard/users/:id.:sf_format)
+Jul 23 06:57:36 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user_delete" (/guard/users/:id.:sf_format)
+Jul 23 06:57:36 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user_show" (/guard/users/:id.:sf_format)
+Jul 23 06:57:36 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user_object" (/guard/users/:id/:action.:sf_format)
+Jul 23 06:57:36 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user_collection" (/guard/users/:action/action.:sf_format)
+Jul 23 06:57:36 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_group_filter" (/guard/groups/filter.:sf_format)
+Jul 23 06:57:36 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_group_batch" (/guard/groups/batch.:sf_format)
+Jul 23 06:57:36 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_group" (/guard/groups.:sf_format)
+Jul 23 06:57:36 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_group_new" (/guard/groups/new.:sf_format)
+Jul 23 06:57:36 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_group_create" (/guard/groups.:sf_format)
+Jul 23 06:57:36 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_group_edit" (/guard/groups/:id/edit.:sf_format)
+Jul 23 06:57:36 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_group_update" (/guard/groups/:id.:sf_format)
+Jul 23 06:57:36 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_group_delete" (/guard/groups/:id.:sf_format)
+Jul 23 06:57:36 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_group_show" (/guard/groups/:id.:sf_format)
+Jul 23 06:57:36 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_group_object" (/guard/groups/:id/:action.:sf_format)
+Jul 23 06:57:36 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_group_collection" (/guard/groups/:action/action.:sf_format)
+Jul 23 06:57:36 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_permission_filter" (/guard/permissions/filter.:sf_format)
+Jul 23 06:57:36 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_permission_batch" (/guard/permissions/batch.:sf_format)
+Jul 23 06:57:36 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_permission" (/guard/permissions.:sf_format)
+Jul 23 06:57:36 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_permission_new" (/guard/permissions/new.:sf_format)
+Jul 23 06:57:36 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_permission_create" (/guard/permissions.:sf_format)
+Jul 23 06:57:36 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_permission_edit" (/guard/permissions/:id/edit.:sf_format)
+Jul 23 06:57:36 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_permission_update" (/guard/permissions/:id.:sf_format)
+Jul 23 06:57:36 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_permission_delete" (/guard/permissions/:id.:sf_format)
+Jul 23 06:57:36 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_permission_show" (/guard/permissions/:id.:sf_format)
+Jul 23 06:57:36 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_permission_object" (/guard/permissions/:id/:action.:sf_format)
+Jul 23 06:57:36 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_permission_collection" (/guard/permissions/:action/action.:sf_format)
+Jul 23 06:57:36 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'menu',  'action' => 'index',)
+Jul 23 06:57:37 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jul 23 06:57:37 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Jul 23 06:57:37 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jul 23 06:57:37 symfony [info] {menuActions} Call "menuActions->executeIndex()"
+Jul 23 06:57:37 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Jul 23 06:57:37 symfony [info] {Doctrine_Connection_Mysql} query : SELECT COUNT(*) AS num_results FROM menu_item m - ()
+Jul 23 06:57:37 symfony [info] {sfPHPView} Render "/var/www/symfony/cache/admin/dev/modules/autoMenu/templates/indexSuccess.php"
+Jul 23 06:57:37 symfony [info] {sfPartialView} Render "/var/www/symfony/cache/admin/dev/modules/autoMenu/templates/_assets.php"
+Jul 23 06:57:37 symfony [info] {sfPartialView} Render "/var/www/symfony/cache/admin/dev/modules/autoMenu/templates/_flashes.php"
+Jul 23 06:57:37 symfony [info] {sfPartialView} Render "/var/www/symfony/cache/admin/dev/modules/autoMenu/templates/_list_header.php"
+Jul 23 06:57:37 symfony [info] {sfPartialView} Render "/var/www/symfony/cache/admin/dev/modules/autoMenu/templates/_filters.php"
+Jul 23 06:57:37 symfony [info] {sfPartialView} Render "/var/www/symfony/cache/admin/dev/modules/autoMenu/templates/_filters_field.php"
+Jul 23 06:57:37 symfony [info] {sfPartialView} Render "/var/www/symfony/cache/admin/dev/modules/autoMenu/templates/_filters_field.php"
+Jul 23 06:57:37 symfony [info] {sfPartialView} Render "/var/www/symfony/cache/admin/dev/modules/autoMenu/templates/_filters_field.php"
+Jul 23 06:57:37 symfony [info] {sfPartialView} Render "/var/www/symfony/cache/admin/dev/modules/autoMenu/templates/_filters_field.php"
+Jul 23 06:57:37 symfony [info] {sfPartialView} Render "/var/www/symfony/cache/admin/dev/modules/autoMenu/templates/_filters_field.php"
+Jul 23 06:57:37 symfony [info] {Doctrine_Connection_Mysql} query : SELECT m.id AS m__id, m.name AS m__name, m.title AS m__title, m.description AS m__description, m.picture AS m__picture, m.parent_id AS m__parent_id FROM menu_item m - ()
+Jul 23 06:57:37 symfony [info] {sfPartialView} Render "/var/www/symfony/cache/admin/dev/modules/autoMenu/templates/_list_actions.php"
+Jul 23 06:57:37 symfony [info] {sfPartialView} Render "/var/www/symfony/cache/admin/dev/modules/autoMenu/templates/_list.php"
+Jul 23 06:57:37 symfony [info] {sfPartialView} Render "/var/www/symfony/cache/admin/dev/modules/autoMenu/templates/_list_th_tabular.php"
+Jul 23 06:57:37 symfony [info] {main} Set slot "sf_admin.current_header"
+Jul 23 06:57:37 symfony [info] {main} Get slot "sf_admin.current_header"
+Jul 23 06:57:37 symfony [info] {main} Set slot "sf_admin.current_header"
+Jul 23 06:57:37 symfony [info] {main} Get slot "sf_admin.current_header"
+Jul 23 06:57:37 symfony [info] {main} Set slot "sf_admin.current_header"
+Jul 23 06:57:37 symfony [info] {main} Get slot "sf_admin.current_header"
+Jul 23 06:57:37 symfony [info] {sfPartialView} Render "/var/www/symfony/cache/admin/dev/modules/autoMenu/templates/_pagination.php"
+Jul 23 06:57:37 symfony [info] {Doctrine_Connection_Mysql} query : SELECT m.id AS m__id, m.name AS m__name, m.title AS m__title, m.description AS m__description, m.picture AS m__picture, m.parent_id AS m__parent_id FROM menu_item m LIMIT 20 - ()
+Jul 23 06:57:38 symfony [info] {sfPartialView} Render "/var/www/symfony/cache/admin/dev/modules/autoMenu/templates/_list_td_batch_actions.php"
+Jul 23 06:57:38 symfony [info] {sfPartialView} Render "/var/www/symfony/cache/admin/dev/modules/autoMenu/templates/_list_td_tabular.php"
+Jul 23 06:57:38 symfony [info] {sfPartialView} Render "/var/www/symfony/cache/admin/dev/modules/autoMenu/templates/_list_td_actions.php"
+Jul 23 06:57:38 symfony [info] {sfPartialView} Render "/var/www/symfony/cache/admin/dev/modules/autoMenu/templates/_list_td_batch_actions.php"
+Jul 23 06:57:38 symfony [info] {sfPartialView} Render "/var/www/symfony/cache/admin/dev/modules/autoMenu/templates/_list_td_tabular.php"
+Jul 23 06:57:38 symfony [info] {Doctrine_Connection_Statement} execute : SELECT m.id AS m__id, m.name AS m__name, m.title AS m__title, m.description AS m__description, m.picture AS m__picture, m.parent_id AS m__parent_id FROM menu_item m WHERE (m.id = ?) - (1)
+Jul 23 06:57:38 symfony [info] {sfPartialView} Render "/var/www/symfony/cache/admin/dev/modules/autoMenu/templates/_list_td_actions.php"
+Jul 23 06:57:38 symfony [info] {sfPartialView} Render "/var/www/symfony/cache/admin/dev/modules/autoMenu/templates/_list_td_batch_actions.php"
+Jul 23 06:57:38 symfony [info] {sfPartialView} Render "/var/www/symfony/cache/admin/dev/modules/autoMenu/templates/_list_td_tabular.php"
+Jul 23 06:57:38 symfony [info] {Doctrine_Connection_Statement} execute : SELECT m.id AS m__id, m.name AS m__name, m.title AS m__title, m.description AS m__description, m.picture AS m__picture, m.parent_id AS m__parent_id FROM menu_item m WHERE (m.id = ?) - (2)
+Jul 23 06:57:38 symfony [info] {sfPartialView} Render "/var/www/symfony/cache/admin/dev/modules/autoMenu/templates/_list_td_actions.php"
+Jul 23 06:57:38 symfony [info] {sfPartialView} Render "/var/www/symfony/cache/admin/dev/modules/autoMenu/templates/_list_td_batch_actions.php"
+Jul 23 06:57:38 symfony [info] {sfPartialView} Render "/var/www/symfony/cache/admin/dev/modules/autoMenu/templates/_list_td_tabular.php"
+Jul 23 06:57:38 symfony [info] {Doctrine_Connection_Statement} execute : SELECT m.id AS m__id, m.name AS m__name, m.title AS m__title, m.description AS m__description, m.picture AS m__picture, m.parent_id AS m__parent_id FROM menu_item m WHERE (m.id = ?) - (2)
+Jul 23 06:57:38 symfony [info] {sfPartialView} Render "/var/www/symfony/cache/admin/dev/modules/autoMenu/templates/_list_td_actions.php"
+Jul 23 06:57:38 symfony [info] {sfPartialView} Render "/var/www/symfony/cache/admin/dev/modules/autoMenu/templates/_list_td_batch_actions.php"
+Jul 23 06:57:38 symfony [info] {sfPartialView} Render "/var/www/symfony/cache/admin/dev/modules/autoMenu/templates/_list_td_tabular.php"
+Jul 23 06:57:38 symfony [info] {sfPartialView} Render "/var/www/symfony/cache/admin/dev/modules/autoMenu/templates/_list_td_actions.php"
+Jul 23 06:57:38 symfony [info] {sfPartialView} Render "/var/www/symfony/cache/admin/dev/modules/autoMenu/templates/_list_td_batch_actions.php"
+Jul 23 06:57:38 symfony [info] {sfPartialView} Render "/var/www/symfony/cache/admin/dev/modules/autoMenu/templates/_list_td_tabular.php"
+Jul 23 06:57:38 symfony [info] {Doctrine_Connection_Statement} execute : SELECT m.id AS m__id, m.name AS m__name, m.title AS m__title, m.description AS m__description, m.picture AS m__picture, m.parent_id AS m__parent_id FROM menu_item m WHERE (m.id = ?) - (5)
+Jul 23 06:57:38 symfony [info] {sfPartialView} Render "/var/www/symfony/cache/admin/dev/modules/autoMenu/templates/_list_td_actions.php"
+Jul 23 06:57:38 symfony [info] {sfPartialView} Render "/var/www/symfony/cache/admin/dev/modules/autoMenu/templates/_list_td_batch_actions.php"
+Jul 23 06:57:38 symfony [info] {sfPartialView} Render "/var/www/symfony/cache/admin/dev/modules/autoMenu/templates/_list_td_tabular.php"
+Jul 23 06:57:38 symfony [info] {Doctrine_Connection_Statement} execute : SELECT m.id AS m__id, m.name AS m__name, m.title AS m__title, m.description AS m__description, m.picture AS m__picture, m.parent_id AS m__parent_id FROM menu_item m WHERE (m.id = ?) - (5)
+Jul 23 06:57:38 symfony [info] {sfPartialView} Render "/var/www/symfony/cache/admin/dev/modules/autoMenu/templates/_list_td_actions.php"
+Jul 23 06:57:38 symfony [info] {sfPartialView} Render "/var/www/symfony/cache/admin/dev/modules/autoMenu/templates/_list_td_batch_actions.php"
+Jul 23 06:57:38 symfony [info] {sfPartialView} Render "/var/www/symfony/cache/admin/dev/modules/autoMenu/templates/_list_td_tabular.php"
+Jul 23 06:57:38 symfony [info] {Doctrine_Connection_Statement} execute : SELECT m.id AS m__id, m.name AS m__name, m.title AS m__title, m.description AS m__description, m.picture AS m__picture, m.parent_id AS m__parent_id FROM menu_item m WHERE (m.id = ?) - (5)
+Jul 23 06:57:38 symfony [info] {sfPartialView} Render "/var/www/symfony/cache/admin/dev/modules/autoMenu/templates/_list_td_actions.php"
+Jul 23 06:57:38 symfony [info] {sfPartialView} Render "/var/www/symfony/cache/admin/dev/modules/autoMenu/templates/_list_td_batch_actions.php"
+Jul 23 06:57:38 symfony [info] {sfPartialView} Render "/var/www/symfony/cache/admin/dev/modules/autoMenu/templates/_list_td_tabular.php"
+Jul 23 06:57:38 symfony [info] {Doctrine_Connection_Statement} execute : SELECT m.id AS m__id, m.name AS m__name, m.title AS m__title, m.description AS m__description, m.picture AS m__picture, m.parent_id AS m__parent_id FROM menu_item m WHERE (m.id = ?) - (5)
+Jul 23 06:57:38 symfony [info] {sfPartialView} Render "/var/www/symfony/cache/admin/dev/modules/autoMenu/templates/_list_td_actions.php"
+Jul 23 06:57:38 symfony [info] {sfPartialView} Render "/var/www/symfony/cache/admin/dev/modules/autoMenu/templates/_list_td_batch_actions.php"
+Jul 23 06:57:38 symfony [info] {sfPartialView} Render "/var/www/symfony/cache/admin/dev/modules/autoMenu/templates/_list_td_tabular.php"
+Jul 23 06:57:38 symfony [info] {Doctrine_Connection_Statement} execute : SELECT m.id AS m__id, m.name AS m__name, m.title AS m__title, m.description AS m__description, m.picture AS m__picture, m.parent_id AS m__parent_id FROM menu_item m WHERE (m.id = ?) - (5)
+Jul 23 06:57:38 symfony [info] {sfPartialView} Render "/var/www/symfony/cache/admin/dev/modules/autoMenu/templates/_list_td_actions.php"
+Jul 23 06:57:38 symfony [info] {sfPartialView} Render "/var/www/symfony/cache/admin/dev/modules/autoMenu/templates/_list_td_batch_actions.php"
+Jul 23 06:57:38 symfony [info] {sfPartialView} Render "/var/www/symfony/cache/admin/dev/modules/autoMenu/templates/_list_td_tabular.php"
+Jul 23 06:57:38 symfony [info] {Doctrine_Connection_Statement} execute : SELECT m.id AS m__id, m.name AS m__name, m.title AS m__title, m.description AS m__description, m.picture AS m__picture, m.parent_id AS m__parent_id FROM menu_item m WHERE (m.id = ?) - (6)
+Jul 23 06:57:38 symfony [info] {sfPartialView} Render "/var/www/symfony/cache/admin/dev/modules/autoMenu/templates/_list_td_actions.php"
+Jul 23 06:57:38 symfony [info] {sfPartialView} Render "/var/www/symfony/cache/admin/dev/modules/autoMenu/templates/_list_td_batch_actions.php"
+Jul 23 06:57:38 symfony [info] {sfPartialView} Render "/var/www/symfony/cache/admin/dev/modules/autoMenu/templates/_list_td_tabular.php"
+Jul 23 06:57:38 symfony [info] {Doctrine_Connection_Statement} execute : SELECT m.id AS m__id, m.name AS m__name, m.title AS m__title, m.description AS m__description, m.picture AS m__picture, m.parent_id AS m__parent_id FROM menu_item m WHERE (m.id = ?) - (7)
+Jul 23 06:57:38 symfony [info] {sfPartialView} Render "/var/www/symfony/cache/admin/dev/modules/autoMenu/templates/_list_td_actions.php"
+Jul 23 06:57:38 symfony [info] {sfPartialView} Render "/var/www/symfony/cache/admin/dev/modules/autoMenu/templates/_list_td_batch_actions.php"
+Jul 23 06:57:38 symfony [info] {sfPartialView} Render "/var/www/symfony/cache/admin/dev/modules/autoMenu/templates/_list_td_tabular.php"
+Jul 23 06:57:38 symfony [info] {Doctrine_Connection_Statement} execute : SELECT m.id AS m__id, m.name AS m__name, m.title AS m__title, m.description AS m__description, m.picture AS m__picture, m.parent_id AS m__parent_id FROM menu_item m WHERE (m.id = ?) - (8)
+Jul 23 06:57:38 symfony [info] {sfPartialView} Render "/var/www/symfony/cache/admin/dev/modules/autoMenu/templates/_list_td_actions.php"
+Jul 23 06:57:38 symfony [info] {sfPartialView} Render "/var/www/symfony/cache/admin/dev/modules/autoMenu/templates/_list_td_batch_actions.php"
+Jul 23 06:57:38 symfony [info] {sfPartialView} Render "/var/www/symfony/cache/admin/dev/modules/autoMenu/templates/_list_td_tabular.php"
+Jul 23 06:57:38 symfony [info] {Doctrine_Connection_Statement} execute : SELECT m.id AS m__id, m.name AS m__name, m.title AS m__title, m.description AS m__description, m.picture AS m__picture, m.parent_id AS m__parent_id FROM menu_item m WHERE (m.id = ?) - (9)
+Jul 23 06:57:38 symfony [info] {sfPartialView} Render "/var/www/symfony/cache/admin/dev/modules/autoMenu/templates/_list_td_actions.php"
+Jul 23 06:57:38 symfony [info] {sfPartialView} Render "/var/www/symfony/cache/admin/dev/modules/autoMenu/templates/_list_td_batch_actions.php"
+Jul 23 06:57:38 symfony [info] {sfPartialView} Render "/var/www/symfony/cache/admin/dev/modules/autoMenu/templates/_list_td_tabular.php"
+Jul 23 06:57:38 symfony [info] {Doctrine_Connection_Statement} execute : SELECT m.id AS m__id, m.name AS m__name, m.title AS m__title, m.description AS m__description, m.picture AS m__picture, m.parent_id AS m__parent_id FROM menu_item m WHERE (m.id = ?) - (10)
+Jul 23 06:57:38 symfony [info] {sfPartialView} Render "/var/www/symfony/cache/admin/dev/modules/autoMenu/templates/_list_td_actions.php"
+Jul 23 06:57:38 symfony [info] {sfPartialView} Render "/var/www/symfony/cache/admin/dev/modules/autoMenu/templates/_list_td_batch_actions.php"
+Jul 23 06:57:38 symfony [info] {sfPartialView} Render "/var/www/symfony/cache/admin/dev/modules/autoMenu/templates/_list_td_tabular.php"
+Jul 23 06:57:38 symfony [info] {Doctrine_Connection_Statement} execute : SELECT m.id AS m__id, m.name AS m__name, m.title AS m__title, m.description AS m__description, m.picture AS m__picture, m.parent_id AS m__parent_id FROM menu_item m WHERE (m.id = ?) - (6)
+Jul 23 06:57:38 symfony [info] {sfPartialView} Render "/var/www/symfony/cache/admin/dev/modules/autoMenu/templates/_list_td_actions.php"
+Jul 23 06:57:38 symfony [info] {sfPartialView} Render "/var/www/symfony/cache/admin/dev/modules/autoMenu/templates/_list_td_batch_actions.php"
+Jul 23 06:57:38 symfony [info] {sfPartialView} Render "/var/www/symfony/cache/admin/dev/modules/autoMenu/templates/_list_td_tabular.php"
+Jul 23 06:57:38 symfony [info] {Doctrine_Connection_Statement} execute : SELECT m.id AS m__id, m.name AS m__name, m.title AS m__title, m.description AS m__description, m.picture AS m__picture, m.parent_id AS m__parent_id FROM menu_item m WHERE (m.id = ?) - (6)
+Jul 23 06:57:39 symfony [info] {sfPartialView} Render "/var/www/symfony/cache/admin/dev/modules/autoMenu/templates/_list_td_actions.php"
+Jul 23 06:57:39 symfony [info] {sfPartialView} Render "/var/www/symfony/cache/admin/dev/modules/autoMenu/templates/_list_td_batch_actions.php"
+Jul 23 06:57:39 symfony [info] {sfPartialView} Render "/var/www/symfony/cache/admin/dev/modules/autoMenu/templates/_list_td_tabular.php"
+Jul 23 06:57:39 symfony [info] {Doctrine_Connection_Statement} execute : SELECT m.id AS m__id, m.name AS m__name, m.title AS m__title, m.description AS m__description, m.picture AS m__picture, m.parent_id AS m__parent_id FROM menu_item m WHERE (m.id = ?) - (1)
+Jul 23 06:57:39 symfony [info] {sfPartialView} Render "/var/www/symfony/cache/admin/dev/modules/autoMenu/templates/_list_td_actions.php"
+Jul 23 06:57:39 symfony [info] {sfPartialView} Render "/var/www/symfony/cache/admin/dev/modules/autoMenu/templates/_list_td_batch_actions.php"
+Jul 23 06:57:39 symfony [info] {sfPartialView} Render "/var/www/symfony/cache/admin/dev/modules/autoMenu/templates/_list_td_tabular.php"
+Jul 23 06:57:39 symfony [info] {Doctrine_Connection_Statement} execute : SELECT m.id AS m__id, m.name AS m__name, m.title AS m__title, m.description AS m__description, m.picture AS m__picture, m.parent_id AS m__parent_id FROM menu_item m WHERE (m.id = ?) - (18)
+Jul 23 06:57:39 symfony [info] {sfPartialView} Render "/var/www/symfony/cache/admin/dev/modules/autoMenu/templates/_list_td_actions.php"
+Jul 23 06:57:39 symfony [info] {sfPartialView} Render "/var/www/symfony/cache/admin/dev/modules/autoMenu/templates/_list_td_batch_actions.php"
+Jul 23 06:57:39 symfony [info] {sfPartialView} Render "/var/www/symfony/cache/admin/dev/modules/autoMenu/templates/_list_td_tabular.php"
+Jul 23 06:57:39 symfony [info] {Doctrine_Connection_Statement} execute : SELECT m.id AS m__id, m.name AS m__name, m.title AS m__title, m.description AS m__description, m.picture AS m__picture, m.parent_id AS m__parent_id FROM menu_item m WHERE (m.id = ?) - (18)
+Jul 23 06:57:39 symfony [info] {sfPartialView} Render "/var/www/symfony/cache/admin/dev/modules/autoMenu/templates/_list_td_actions.php"
+Jul 23 06:57:39 symfony [info] {sfPartialView} Render "/var/www/symfony/cache/admin/dev/modules/autoMenu/templates/_list_batch_actions.php"
+Jul 23 06:57:39 symfony [info] {sfPartialView} Render "/var/www/symfony/cache/admin/dev/modules/autoMenu/templates/_list_footer.php"
+Jul 23 06:57:39 symfony [info] {sfPartialView} Render "/var/www/symfony/cache/admin/dev/modules/autoMenu/templates/_themeswitcher.php"
+Jul 23 06:57:39 symfony [info] {sfPHPView} Decorate content with "/var/www/symfony/apps/admin/templates/layout.php"
+Jul 23 06:57:39 symfony [info] {sfPHPView} Render "/var/www/symfony/apps/admin/templates/layout.php"
+Jul 23 06:57:39 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.first_name AS s__first_name, s.last_name AS s__last_name, s.email_address AS s__email_address, s.username AS s__username, s.algorithm AS s__algorithm, s.salt AS s__salt, s.password AS s__password, s.is_active AS s__is_active, s.is_super_admin AS s__is_super_admin, s.last_login AS s__last_login, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM sf_guard_user s WHERE (s.id = ?) LIMIT 1 - (1)
+Jul 23 06:57:39 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Jul 23 06:57:39 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jul 23 06:57:39 symfony [info] {sfWebDebugLogger} Configuration 79.62 ms (12)
+Jul 23 06:57:39 symfony [info] {sfWebDebugLogger} Factories 368.11 ms (1)
+Jul 23 06:57:39 symfony [info] {sfWebDebugLogger} Action "menu/index" 239.96 ms (1)
+Jul 23 06:57:39 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.06 ms (23)
+Jul 23 06:57:39 symfony [info] {sfWebDebugLogger} View "Success" for "menu/index" 1794.45 ms (1)
+Jul 23 06:57:39 symfony [info] {sfWebDebugLogger} Partial "menu/_assets" 0.46 ms (1)
+Jul 23 06:57:39 symfony [info] {sfWebDebugLogger} Partial "menu/_flashes" 0.39 ms (1)
+Jul 23 06:57:39 symfony [info] {sfWebDebugLogger} Partial "menu/_list_header" 0.34 ms (1)
+Jul 23 06:57:39 symfony [info] {sfWebDebugLogger} Partial "menu/_filters" 153.92 ms (1)
+Jul 23 06:57:39 symfony [info] {sfWebDebugLogger} Partial "menu/_filters_field" 148.77 ms (5)
+Jul 23 06:57:39 symfony [info] {sfWebDebugLogger} Partial "menu/_list_actions" 0.85 ms (1)
+Jul 23 06:57:39 symfony [info] {sfWebDebugLogger} Partial "menu/_list" 1407.63 ms (1)
+Jul 23 06:57:39 symfony [info] {sfWebDebugLogger} Partial "menu/_list_th_tabular" 0.93 ms (1)
+Jul 23 06:57:39 symfony [info] {sfWebDebugLogger} Partial "menu/_pagination" 1.02 ms (1)
+Jul 23 06:57:39 symfony [info] {sfWebDebugLogger} Partial "menu/_list_td_batch_actions" 22.89 ms (20)
+Jul 23 06:57:39 symfony [info] {sfWebDebugLogger} Partial "menu/_list_td_tabular" 1144.23 ms (20)
+Jul 23 06:57:39 symfony [info] {sfWebDebugLogger} Partial "menu/_list_td_actions" 35.51 ms (20)
+Jul 23 06:57:39 symfony [info] {sfWebDebugLogger} Partial "menu/_list_batch_actions" 10.74 ms (1)
+Jul 23 06:57:39 symfony [info] {sfWebDebugLogger} Partial "menu/_list_footer" 0.35 ms (1)
+Jul 23 06:57:39 symfony [info] {sfWebDebugLogger} Partial "menu/_themeswitcher" 0.32 ms (1)
+Jul 23 06:57:39 symfony [info] {sfWebResponse} Send content (235972 o)

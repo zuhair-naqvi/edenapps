@@ -1,3 +1,25 @@
+ShitsMeList:
+  ShitsMeList_1:
+    title: 'Dont offer water'
+    description: 'Serve water only if asked, don''t proactively ask them if they want coz they will always say yes even if they dont really want any.'
+  ShitsMeList_2:
+    title: 'Kitchen Stinks'
+    description: 'Please throw the rotting ham away!'
+  ShitsMeList_3:
+    title: 'Music too tacky'
+    description: 'Not sure who''s ipod we''re playing of but most tracks from it sound like 70s porn theme songs..'
+Roster:
+  Roster_1:
+    Member: Members_1
+    monday: '1pm - 9pm'
+    tuesday: '1pm - 9pm'
+    wednesday: Off
+    thursday: Off
+    friday: '4pm - 12am'
+    saturday: '4pm - 12am'
+    sunday: '8am - 4pm'
+    created_at: '2010-12-28 08:00:42'
+    updated_at: '2011-01-08 07:14:33'
 sfGuardUser:
   sfGuardUser_1:
     first_name: null
@@ -9,16 +31,16 @@ sfGuardUser:
     password: 45d216f94c78210177bc5ac30bb8dcb62c9ea4d3
     is_active: true
     is_super_admin: false
-    last_login: '2010-12-27 09:31:24'
+    last_login: '2011-07-23 06:57:36'
     created_at: '2010-12-04 17:43:11'
-    updated_at: '2010-12-27 09:31:24'
+    updated_at: '2011-07-23 06:57:36'
 sfGuardRememberKey:
-  sfGuardRememberKey_1:
+  sfGuardRememberKey_2:
     User: sfGuardUser_1
-    remember_key: nlvg04gfn80ck8kksksoc0k8osgkg8o
-    ip_address: 203.206.164.179
-    created_at: '2010-12-06 03:05:26'
-    updated_at: '2010-12-06 03:05:26'
+    remember_key: a8pdlni6ue8k4gwog8wog8w8sc8oso8
+    ip_address: 180.148.179.7
+    created_at: '2011-05-13 01:46:59'
+    updated_at: '2011-05-13 01:46:59'
 Members:
   Members_1:
     name: Zuhair
@@ -27,6 +49,13 @@ Members:
     last_login: null
     created_at: '2010-12-26 05:06:05'
     updated_at: '2010-12-27 07:05:06'
+  Members_2:
+    name: 'James Eden'
+    level: Gold
+    email: james@thecarlton.com.au
+    last_login: '2011-01-01 07:02:00'
+    created_at: '2011-01-08 07:02:59'
+    updated_at: '2011-05-17 13:38:48'
 MenuItem:
   MenuItem_1:
     name: Food
@@ -230,6 +259,17 @@ MenuItem:
     description: "Lucky Cat Pinot Grigio, King Valley, Vic  \r\n\r\nGlass $8	\r\n\r\nBottle $40"
     picture: 3729856cbff9d80d375177877d2ae21c68e0e6f2.jpg
     Parent: MenuItem_7
+  MenuItem_35:
+    name: Spirits
+    title: Spirits
+    description: ''
+    picture: null
+  MenuItem_36:
+    name: 42Below
+    title: '42 Below Vodka click to find out more...'
+    description: "Like it?  Click to Share and earn points.\r\n\r\nSome facts about 42 Below Vodka:\r\n\r\nThe water used to make 42 Below Vodka comes from beneath an extinct volcano and gets the highest purity rating available.\r\n\r\n42 Below is a little stronger than most other vodkas (84 proof). It uses a process that is closest to the grain (wheat) based vodka of Scandinavia. \r\n\r\n42 Below is made from GE-free wheat."
+    picture: null
+    Parent: MenuItem_35
 Box:
   Box_1:
     title: 'Pure Blonde'
