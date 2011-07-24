@@ -31,7 +31,7 @@ class bookingsActions extends sfActions
 
         $message = $this->getMailer()->compose(
         array('webmaster@thecarltonapp.com' => 'The Carlton App'),
-        'hi.zuhair@gmail.com',
+        'james@deepeast.com.au',
         'New Booking',
       <<<EOF
 From: $name <$email> - PH: $phone
